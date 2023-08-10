@@ -1,0 +1,102 @@
+<% layout('layouts/boilerplate')%>
+<%- include('./gora') %>
+
+<div id="lista">
+    
+    <% const wybranyRok = 2010 %> 
+    <% function pag(obecnyyRok){ %>
+        <% const g = obecnyyRok+''; %>
+        <% const obecnyRok = Number(`${g.slice(2,4)}`); %>
+        <% //const obecnyRok = 13; %>
+        <% const data = new Date().getFullYear() + '';const rokTeraz = data.slice(2, 4);%> 
+        
+            
+            
+            
+        
+        
+        
+        
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                <li class="page-item plusone"><a class="page-link" href="/nauczanie/2011">2011</a></li>
+                <li class="page-item plustwo"><a class="page-link" href="/nauczanie/2012"><%= `2012` %></a></li>
+                <li class="page-item">
+                    <a class="page-link" href="/nauczanie/2013" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+        
+            </ul>
+          </nav>
+        <% } %>
+       
+        <%= pag(wybranyRok) %>
+    <% function checkYear(yr, yr2, kazanie){if(yr >= yr2){ %>
+        <article class="animate from-up delay-ms-0">
+            <div class="row nomargin">
+                <div class="col"></div>
+                <div class="col-lg-6 col-md-8 col-10 mb-2">
+                    <div id="accordion<%= kazanie._id %>" class="card border-info mt-2">
+                        <div class="card-header text-secondary fs-7">
+                            <%= kazanie.data.getDate() %>
+                            <%= monthNames[kazanie.data.getMonth()] %>
+                            <%= kazanie.data.getFullYear() %> 
+                        </div>
+                        <div class="card-body row nomargin">
+                            <div class="col-7"> 
+                                <h5 class="card-title"><%= kazanie.tytul %> </h5>
+                                <p class="card-text"><%= kazanie.mowca %></p>
+                            </div>
+                            <div class="col-sm-5 col-12 pt-3 pt-sm-0 text-end"> 
+                                <button id='play-btn<%= kazanie._id %>' class="btn btn-outline-success btn-audio" data-bs-toggle="collapse" data-bs-target="#collapse<%= kazanie._id %>" aria-expanded="true" aria-controls="collapse<%= kazanie._id %>"
+                                    onclick="
+                                    const n = document.getElementById('acrdn-<%= kazanie._id %>');
+                                    let a = '<%= kazanie.audio %>';
+                                    let t = '<%= kazanie.typ %>';
+                                    //n.innerHTML = `${audioPlay(a,t)}`; 
+                                    n.innerHTML = `<audio class='' id='kaz' controls><source src='/dodaj/kazania/${a}.${t}'></audio>`;
+                                    const playy = document.getElementById('play-btn<%= kazanie._id %>');
+                                    playy.classList.toggle('btn-success');
+                                    playy.classList.toggle('btn-outline-success');
+                                    ">
+                                    <!-- <i class="bi bi-play-fill fs-2"></i> -->
+                                    <i class="fa-solid fa-play fs-2 move-icon move-icon-2"></i>
+                                </button>
+                                <% if(kazanie.link){ %>
+                                    <a class="btn btn-outline-danger btn-audio" href="<%= kazanie.link %>" target=”_blank”><i class="bi bi-youtube fs-2 move-icon"></i></a>
+                                <% } %>
+                                <a class="btn btn-outline-secondary btn-audio" href="/dodaj/kazania/<%= kazanie.audio %>.<%= kazanie.typ %>" download><i class="bi bi-download fs-2 move-icon"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div id="collapse<%= kazanie._id %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= kazanie._id %>">
+                        <div id="acrdn-<%= kazanie._id %>" class="accordion-body card">
+                          Loading...
+                        </div>
+                      </div>
+                </div>
+                <div class="col"></div>  
+            </div>
+        </div>
+    </article>
+        <% }else{return}} %>
+    
+    
+    
+    <% for (let kazanie of kazania) {%>
+    <% const rok = kazanie.data.getFullYear(); %>
+    
+    <%= checkYear(wybranyRok, rok, kazanie); %>
+    
+
+    
+    <% }%> 
+
+    <%= pag(wybranyRok) %>

@@ -1,0 +1,266 @@
+
+.uk-position-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Horizontal */
+.uk-position-top-center,
+.uk-position-bottom-center {
+  /* --uk-position-translate-x: 0%;
+  transform: translate(var(--uk-position-translate-x), 0); */
+  /* 1 */
+  width: max-content;
+}
+.uk-position-top-center {
+  top: 0;
+}
+.uk-position-bottom-center {
+  bottom: 0;
+}
+
+/* ========================================================================
+   Component: Slideshow
+ ========================================================================== */
+/*
+ * 1. Prevent tab highlighting on iOS.
+ */
+ .uk-slideshow {
+    /* 1 */
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* Items
+   ========================================================================== */
+  /*
+   * 1. Create position and stacking context
+   * 2. Reset list
+   * 3. Clip child elements
+   * 4. Prevent displaying the callout information on iOS.
+   * 5. Disable horizontal panning gestures
+   */
+  .uk-slideshow-items {
+    /* 1 */
+    position: relative;
+    z-index: 0;
+    /* 2 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* 3 */
+    overflow: hidden;
+    /* 4 */
+    -webkit-touch-callout: none;
+    /* 5 */
+    touch-action: pan-y;
+  }
+  /* Item
+   ========================================================================== */
+  /*
+   * 1. Position items above each other
+   * 2. Take the full width
+   * 3. Clip child elements, e.g. for `uk-cover`
+   * 4. Optimize animation
+   */
+  .uk-slideshow-items > * {
+    /* 1 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 2 */
+    right: 0;
+    bottom: 0;
+    /* 3 */
+    overflow: hidden;
+    /* 4 */
+    will-change: transform, opacity;
+  }
+  /*
+   * Hide not active items
+   */
+  .uk-slideshow-items > :not(.uk-active) {
+    display: none;
+  }
+  
+  .uk-position-block {
+    position: relative  !important;
+  }
+
+  .uk-visible-toggle:not(:hover):not(:focus) .uk-hidden-hover:not(:focus-within) {
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+  /*
+   * Keep space when hidden.
+   */
+  .uk-visible-toggle:not(:hover):not(:focus) .uk-invisible-hover:not(:focus-within) {
+    opacity: 0 !important;
+  }
+
+/* uk-light */
+
+
+
+  .uk-position-center {
+    top: calc(40% - var(--uk-position-margin-offset));
+    left: calc(50% - var(--uk-position-margin-offset));
+    --uk-position-translate-x: -50%;
+    --uk-position-translate-y: -50%;
+    transform: translate(var(--uk-position-translate-x), var(--uk-position-translate-y));
+    /* 1 */
+    width: max-content;
+  }
+
+  [class*='uk-position-center'] {
+    position: absolute !important;
+    /* 1 */
+    max-width: calc(100% - (var(--uk-position-margin-offset) * 2));
+    box-sizing: border-box;
+  }
+
+  .uk-position-medium {
+    margin: 30px;
+    --uk-position-margin-offset: 30px;
+  }
+  .uk-text-center {
+    text-align: center !important;
+  }
+
+  @media (min-width: 640px) {
+    .uk-text-left\@s {
+      text-align: left !important;
+    }
+    .uk-text-right\@s {
+      text-align: right !important;
+    }
+    .uk-text-center\@s {
+      text-align: center !important;
+    }
+  }
+  /* Tablet landscape and bigger */
+@media (min-width: 960px) {
+    .uk-text-left\@m {
+      text-align: left !important;
+    }
+    .uk-text-right\@m {
+      text-align: right !important;
+    }
+    .uk-text-center\@m {
+      text-align: center !important;
+    }
+  }
+  /* Desktop and bigger */
+  @media (min-width: 1200px) {
+    .uk-text-left\@l {
+      text-align: left !important;
+    }
+    .uk-text-right\@l {
+      text-align: right !important;
+    }
+    .uk-text-center\@l {
+      text-align: center !important;
+    }
+  }
+  /* Large screen and bigger */
+  @media (min-width: 1600px) {
+    .uk-text-left\@xl {
+      text-align: left !important;
+    }
+    .uk-text-right\@xl {
+      text-align: right !important;
+    }
+    .uk-text-center\@xl {
+      text-align: center !important;
+    }
+  }
+
+  [class*='uk-position-center-left'],
+[class*='uk-position-center-right'] {
+  top: calc(50% - var(--uk-position-margin-offset));
+  --uk-position-translate-y: -50%;
+  transform: translate(0, var(--uk-position-translate-y));
+}
+.uk-position-center-left {
+  left: 0;
+}
+.uk-position-center-right {
+  right: 0;
+}
+.uk-position-center-left-out {
+  right: 100%;
+  width: max-content;
+}
+.uk-position-small {
+    margin: 15px;
+    --uk-position-margin-offset: 15px;
+  }
+  .uk-position-small {
+    margin: 15px;
+    --uk-position-margin-offset: 15px;
+  }
+
+  .uk-position-center-right-out {
+    left: 100%;
+    width: max-content;
+  }
+
+  .uk-light{
+    color: rgba(255, 255, 255, 0.7);
+
+  }
+
+  
+  .uk-light h1,
+.uk-light .uk-h1,
+.uk-light h2,
+.uk-light .uk-h2,
+.uk-light h3,
+.uk-light .uk-h3,
+.uk-light h4,
+.uk-light .uk-h4,
+.uk-light h5,
+.uk-light .uk-h5,
+.uk-light h6,
+.uk-light .uk-h6{
+    color: white;
+}
+.uk-light :focus-visible,
+  .uk-light :focus{
+    outline-color: white;
+  }
+
+  .uk-light .uk-slidenav{
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .uk-light .uk-slidenav:hover{
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .uk-light .uk-slidenav:active{
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .uk-slidenav {
+    padding: 5px 10px;
+    color: rgba(255, 255, 255, 0.5) !important;
+    transition: color 0.1s ease-in-out;
+  }
+  /* Hover */
+  .uk-slidenav:hover {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  /* OnClick */
+  .uk-slidenav:active {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .uk-slidenav-large {
+    padding: 10px 10px;
+  }

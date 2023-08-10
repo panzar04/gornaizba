@@ -1,0 +1,150 @@
+<head>
+  <style>
+    .clicker:hover{
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-naszeLogo" id="navi">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand">
+        <img src="/photos/logo.png" alt="Górna Izba" class="naszeLogo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link kk" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item d-md-none d-block">
+            <a class="nav-link kk" aria-current="page" href="/o_nas">O nas</a>
+          </li>
+          <li class="nav-item dropdown d-none d-md-block">
+            <a class="nav-link kk dropdown-toggle" href="/o_nas" role="button" 
+             aria-expanded="false">
+              O nas
+            </a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item d-none" href="/o_nas">O nas</a></li>
+              <li><hr class="dropdown-divider d-none"></li>
+              <li><a class="dropdown-item" href="/o_nas#kim_jestesmy">Kim jesteśmy?</a></li>
+              <li><a class="dropdown-item" href="/o_nas#w_co_wierzymy">W co wierzymy?</a></li>
+              <li><a class="dropdown-item" href="/o_nas#jacy_jestesmy">Jacy jesteśmy?</a></li>
+              <li><a class="dropdown-item" href="/o_nas/historia">Nasza historia</a></li>
+              <li><a class="dropdown-item" href="/o_nas#liderzy">Nasi liderzy</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link kk" aria-current="page" href="/nauczanie">Nauczanie</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link kk" aria-current="page" href="/aktualnosci">Aktualności</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link kk" aria-current="page" href="/artykuly">Artykuły</a>
+          </li>
+          <li class="nav-item d-block d-md-none">
+            <a class="nav-link kk" aria-current="page" href="/uwielbienie">Uwielbienie</a>
+          </li>
+          <li class="nav-item dropdown d-none d-md-block">
+            <a class="nav-link kk dropdown-toggle" href="/uwielbienie" role="button" aria-expanded="false">
+              Uwielbienie
+            </a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item d-none" href="/uwielbienie">Uwielbienie</a></li>
+              <li><hr class="dropdown-divider d-none"></li>
+              <li><a class="dropdown-item" href="/uwielbienie#o_uwielbieniu">O uwielbieniu</a></li>
+              <!-- <li><a class="dropdown-item" href="/uwielbienie#jak_uwielbiamy">Jak uwielbiamy</a></li> -->
+              <!-- <li><a class="dropdown-item" href="/uwielbienie/nasze_plyty">Nasze płyty</a></li> -->
+              <li><a class="dropdown-item" href="/uwielbienie#piesni">Pieśni</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Nagrania</a></li> -->
+            </ul>
+          </li>
+          <!-- <li class="nav-item d-md-none d-block">
+            <a class="nav-link kk" aria-current="page" href="/spotkania">Spotkania</a>
+          </li>
+          <li class="nav-item dropdown d-none d-md-block">
+            <a class="nav-link kk dropdown-toggle" href="/spotkania" role="button" aria-expanded="false">
+              Spotkania
+            </a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item d-none" href="/spotkania">Spotkania</a></li>
+              <li><hr class="dropdown-divider d-none"></li>
+              <li><a class="dropdown-item" href="/nabozenstwa">Nabożeństwa</a></li>
+              <li><a class="dropdown-item" href="/kaloryfer">KALOryfer</a></li>
+              <li><a class="dropdown-item" href="/coffeehousegorzow">Coffee House Gorzów Wlkp.</a></li>
+              <li><a class="dropdown-item" href="/sniadaniazdobranowina">Śniadania z Dobrą Nowiną</a></li>
+            </ul>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link kk" aria-current="page" href="/kaloryfer">Kaloryfer</a>
+          </li>
+          <li class="nav-item d-md-none d-block">
+            <a class="nav-link kk" aria-current="page" href="/wiecej">Więcej</a>
+          </li>
+          <li class="nav-item dropdown d-none d-md-block">
+            <a class="nav-link kk dropdown-toggle" href="/wiecej" role="button" aria-expanded="false">
+              Więcej
+            </a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item d-none" href="/wiecej">Więcej</a></li>
+              <li><hr class="dropdown-divider d-none"></li>
+              <li><a class="dropdown-item clicker" onclick="nav2p()">Fundacja 2P</a></li>
+              <li><a class="dropdown-item clicker" onclick="navfish()">Fisheclectic</a></li>
+              <li><a class="dropdown-item" href="/coffeehousegorzow">Coffee House</a></li>
+              <li><a class="dropdown-item clicker" onclick="navboan()">Boanerges</a></li>
+              <li><a class="dropdown-item" href="/nasiprzyjaciele">Nasi przyjaciele</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link kk" aria-current="page" href="/kontakt">Kontakt</a>
+          </li>
+        </ul>
+        <% if(currentUser) {%>
+            <a class="nav-link kk text-light px-2">
+              Zalogowano
+            </a>
+            <div class="dropdown btn-primary">
+              <a href="/admin" class="btn btn-primary">
+                Panel Sterowania
+              </a>
+          </div>
+          <a class="btn btn-danger px-2" href="/logout">Wyloguj</a>
+          <% } %>
+          <div class="px-2 d-inline-flex pointer">
+            <a onclick="navyt()" class="fa-brands fa-youtube"></a>
+          </div>
+          <div class="px-2 d-inline-flex pointer">
+            <a onclick="navfb()" class="fa-brands fa-facebook"></a>
+          </div>
+          <hr class="d-block d-md-none">
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function navyt(){
+      window.open("https://www.youtube.com/channel/UCzaAQ9QwLpa7Zrjn3KR_OoA")
+    }
+    function navfb() {
+      window.open("https://www.facebook.com/gornaizba")
+    }
+
+    function nav2p(){
+      window.open("http://fundacja2p.pl/")
+    }
+    function navfish(){
+      window.open("https://fisheclectic.com/")
+    }
+    function navboan(){
+      window.open("https://boanerges.pl/")
+    }
+    // function(){
+    //   window.open()
+    // }
+
+  </script>
+

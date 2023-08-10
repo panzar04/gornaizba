@@ -1,0 +1,32 @@
+<nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading1">Kim jesteśmy?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading2">W co wierzymy?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading3">Jacy jesteśmy?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading4">Nasza historia</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading5">Nasi liderzy</a>
+      </li>
+    </ul>
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+    <h4 id="scrollspyHeading1">Kim jesteśmy?</h4>
+    <%- include('./kim_jestesmy') %>
+    <h4 id="scrollspyHeading2">W co wierzymy?</h4>
+    <%- include('./w_co') %>
+    <h4 id="scrollspyHeading3">Jacy jesteśmy?</h4>
+    <%- include('./jacy_jestesmy') %>
+    <h4 id="scrollspyHeading4">Nasza historia</h4>
+    <%- include('./historia') %>
+    <h4 id="scrollspyHeading5">Nasi liderzy</h4>
+    <%- include('./liderzy') %>
+  </div>

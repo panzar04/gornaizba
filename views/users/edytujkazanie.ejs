@@ -1,0 +1,67 @@
+<% layout('layouts/admin')%>
+
+<% const monthNames = ['stycznia', 'lutego', 'marca','kwietnia', 'maja', 'czerwca', 'lipca','sierpnia', 'września', 'października','listopada', 'grudnia'];  %> 
+
+
+<% const day = kazanie.data.getDate(); %>
+<% const msc = monthNames[kazanie.data.getMonth()]; %>
+<% const rok = kazanie.data.getFullYear(); %>
+<% const data = `${day} ${msc} ${rok}` %> 
+<% const date = new Date(kazanie.data); %>
+<% const formattedDate = date.toISOString().substring(0, 10); // "2023-06-26" %>
+
+<h1 class="text-center pt-3 mt-4">Edytuj Kazanie</h1>
+<div class="row row-cols-3 nomargin mb-5 p-3">
+    
+<div class="col-6 offset-3">
+    <form action="/admin/kazania/<%=kazanie._id%>?_method=PUT" method="POST" novalidate class="validated-form">
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col-5">
+                <label for="mowca" class="form-label">Mówca</label><br>
+                <input type="text" class="form-control" id="mowca" name="kazanie[mowca]" value="<%=kazanie.mowca %>" required>
+            </div>
+        </div>
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col-12">
+                <label for="tytul" class="form-label">Tytuł</label><br>
+                <input type="text" class="form-control" id="tytul" name="kazanie[tytul]" value="<%=kazanie.tytul %>" required>
+            </div>
+        </div>
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col-9">
+                <label for="audio" class="form-label">Audio</label><br>
+                <input type="text" class="form-control" id="audio" name="kazanie[audio]" placeholder="nazwa.mp3" value="<%=kazanie.audio %>" required>
+            </div>
+            <div class="col-3">
+                <label for="typ" class="form-label">Typ pliku</label><br>
+                <input type="text" class="form-control" id="typ" name="kazanie[typ]" value="<%=kazanie.typ %>" required>
+            </div>
+            <!-- <div>
+                <label for="opis" class="form-label">Opis</label>
+                <textarea type="text" class="form-control" id="opis" name="kazanie[opis]" class="form-control" rows="6"><%= kazanie.opis %></textarea>
+            </div> -->
+        </div>
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col-12">
+                <label for="tytul" class="form-label">Link YouTube</label><br>
+                <input type="text" class="form-control" id="link" name="kazanie[link]" value="<%=kazanie.link %>">
+            </div>
+        </div>
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col">
+                <label for="data" class="form-label">Data (w bazie danych zapisana jako <%= data %>)
+                    </label><br>
+                <input type="date" class="form-control" id="data" name="kazanie[data]" value="<%= formattedDate %>">
+            </div>
+        </div>
+        <div>
+            <button class="d-inline btn btn-primary m-2 ms-0">Edytuj</button>
+            <a class="d-inline btn btn-secondary m-2 pb-2" href="/nauczanie">
+                Anuluj
+            </a>
+        </div>
+    </form>
+</div>
+</div>  
+<div class="my-4 py-3 invisible"><p class="my-5 py-4">padding</p></div>
+

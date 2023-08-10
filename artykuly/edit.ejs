@@ -1,0 +1,45 @@
+<% layout('layouts/admin')%>
+
+<h1 class="text-center pt-3">Edytuj Artykuł</h1>
+<div class="col-6 offset-3">
+    <form action="/artykuly/<%=artykul._id%>?_method=PUT" method="POST" novalidate class="validated-form">
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col-5">
+                <label for="tytul" class="form-label">Tytuł</label><br>
+                <input type="text" class="form-control" id="tytul" name="artykul[tytul]" value="<%=artykul.tytul %>" required>
+            </div>
+            <div class="col-5">
+                <label for="autor" class="form-label">Autor</label><br>
+                <input type="text" class="form-control" id="autor" name="artykul[autor]" value="<%=artykul.autor %>">
+            </div>
+        </div>
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col-5">
+                <label for="zdjecie" class="form-label">Zdjęcie</label><br>
+                <input type="text" class="form-control" id="zdjecie" name="artykul[zdjecie]" placeholder="nazwa.jpg" value="<%=artykul.zdjecie %>">
+            </div>
+            <div class="col-5">
+                <label for="alt" class="form-label">Alt</label><br>
+                <input type="text" class="form-control" id="alt" name="artykul[alt]" value="<%=artykul.alt %>">
+            </div>
+        </div>
+        <div class="row nomargin mb-3 justify-content-between">
+            <div class="col-10">
+                <label for="zdjecie" class="form-label">Nazwa pliku PDF</label><br>
+                <input type="text" class="form-control" id="zdjecie" name="artykul[pdf]" placeholder="" value="<%=artykul.pdf %>">
+            </div>
+        </div>
+        <div>
+            <label for="tekst" class="form-label">Tekst</label>
+            <textarea type="text" class="form-control white-space" id="tekst" name="artykul[tekst]" class="form-control" rows="5"><%= artykul.tekst %></textarea>
+        </div>
+        <div>
+            <button class="d-inline btn btn-primary m-2 ms-0">Edytuj</button>
+            <a class="d-inline btn btn-secondary m-2 pb-2" href="/artykuly">
+                Anuluj
+            </a>
+        </div>
+    </form>
+</div>
+
+<div id="addBg" class="invisible"><br></div>

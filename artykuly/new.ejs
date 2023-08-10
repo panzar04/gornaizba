@@ -1,0 +1,96 @@
+<% layout('layouts/admin')%>
+<!-- <head>
+    <style>
+        #tytul,
+        #autor,
+        #zdjecie,
+        #alt{
+            width: 20em;
+        }
+    </style>
+</head> -->
+
+<% //let x = document.getElementById('zdjecie');function podglad (y) %> 
+
+
+
+
+<h1 class="text-center pt-3">Nowy Artykuł</h1>
+<div class="col-6 offset-3">
+<form action="/artykuly" method="POST" class="container">
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col-5">
+            <label for="tytul" class="form-label">Tytuł</label><br>
+            <input type="text" class="form-control" id="tytul" name="artykul[tytul]" required>
+        </div>
+        <div class="col-5">
+            <label for="autor" class="form-label">Autor</label><br>
+            <input type="text" class="form-control" id="autor" name="artykul[autor]">
+        </div>
+    </div>
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col-5">
+            <label for="zdjecie" class="form-label">Zdjęcie</label><br>
+            <input type="text" class="form-control" id="zdjecie" name="artykul[zdjecie]" placeholder="nazwa.jpg">
+        </div>
+        <div class="col-5">
+            <label for="alt" class="form-label">Alt</label><br>
+            <input type="text" class="form-control" id="alt" name="artykul[alt]">
+        </div>
+    </div>
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col-10">
+            <label for="zdjecie" class="form-label">Nazwa pliku PDF</label><br>
+            <input type="text" class="form-control" id="zdjecie" name="artykul[pdf]" placeholder="">
+        </div>
+    </div>
+    <div>
+        <label for="tekst" class="form-label">Tekst</label>
+        <textarea type="text" class="form-control white-space" id="tekst" name="artykul[tekst]" class="form-control" rows="5"></textarea>
+    </div>
+    <div>
+        <button class="d-inline btn btn-success m-2 ms-0">Dodaj</button>
+        <a class="d-inline btn btn-secondary m-2 pb-2" href="/artykuly">
+            Anuluj
+        </a>
+    </div>
+</form>
+</div>
+
+
+
+<!-- <script>
+    const zdjecie = document.querySelector("#zdjecie");
+var uploaded_image;
+
+// Event listener for dragging the image over the div
+zdjecie.addEventListener('dragover', (event) => {
+  event.stopPropagation();
+  event.preventDefault();
+  // Style the drag-and-drop as a "copy file" operation.
+  event.dataTransfer.dropEffect = 'copy';
+});
+
+// Event listener for dropping the image inside the div
+zdjecie.addEventListener('drop', (event) => {
+  event.stopPropagation();
+  event.preventDefault();
+  fileList = event.dataTransfer.files;
+
+  document.querySelector("#file_name").textContent = fileList[0].name;
+  
+  readImage(fileList[0]);
+});
+
+// Converts the image into a data URI
+readImage = (file) => {
+  const reader = new FileReader();
+  reader.addEventListener('load', (event) => {
+    uploaded_image = event.target.result;
+    document.querySelector("#zdjecie").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(file);
+}
+</script> -->
+
+<div id="addBg" class="invisible"><br></div>

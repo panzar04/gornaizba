@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate')%>
+<div class="row nomargin pt-5">
+    <div class="col"></div>
+    <div class="col-8">
+        <div class="container text-center">
+            <% if(currentUser) {%> 
+            <div class="justify-content-center">
+                <!-- <div class="col"><a href="/nowypost" class="btn btn-success">Dodaj Post</a></div>
+                <div class="col"><a href="/nowekazanie" class="btn btn-success">Dodaj Kazanie</a></div>
+                <div class="col"><a href="/admin/kazania" class="btn btn-primary">Kazania</a></div>
+                <div class="col"><a href="/admin/archiwum" class="btn btn-secondary">Archiwum</a></div>
+                <div class="col"><a href="/admin/pomoc" class="btn btn-info">Pomoc</a></div>
+                <div class="col"><a href="/register" class="btn btn-dark">Dodaj Admina</a></div> -->
+
+
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <div class="dropdown btn-success">
+                        <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dodaj...
+                        </button>
+                        <ul class="dropdown-menu">
+                          <!-- <li><a class="dropdown-item" href="/nowypost">Post</a></li> -->
+                          <li><a class="dropdown-item" href="/nowekazanie">Kazanie</a></li>
+                          <li><a class="dropdown-item" href="/artykuly/new">Artykuł</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="/register">Konto admina</a></li>
+                        </ul>
+                    </div>
+                    <!-- <a href="/admin/archiwum" class="btn btn-secondary">Archiwum</a> -->
+                    <a href="/admin/pomoc" class="btn btn-info">Pomoc</a>
+                </div>
+
+
+            <% } else { %>
+                <div class="row row-cols-1">
+                    <div class="col"><a href="/login" class="btn btn-secondary">Panel Admina</a></div>
+            <% } %>  
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+<%- body %> 

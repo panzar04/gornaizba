@@ -1,0 +1,272 @@
+<% layout('layouts/boilerplate')%>
+
+<div id="spinner" class="bg-gorna spinner-bg ">
+  <div class="spinner">
+      <div class="spinner-border text-dark" role="status">
+          <span class="visually-hidden">Loading...</span>
+      </div>
+  </div>
+</div>
+
+<%- include(`./kaz/${obecnyRok}`) %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+//// <audio id='kaz' controls><source src='/dodaj/kazania/<%= //kazanie.audio %>.<%= //kazanie.typ %>'></audio>
+
+    
+    const inViewport = (elem) => {
+        let allElements = document.getElementsByTagName(elem);
+        let windowHeight = window.innerHeight;
+        const elems = () => {
+            for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
+                let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
+                let top = viewportOffset.top;  //  get the offset top
+                if(top < windowHeight){  //  if the top offset is less than the window height
+                    allElements[i].classList.remove('invisible');
+                    allElements[i].classList.add('animate', 'from-up');  //  add the class
+                } 
+                else{
+                    allElements[i].classList.remove('animate', 'from-up');  //  remove the class
+                    allElements[i].classList.add('invisible');
+                }
+            }
+        }
+        elems();
+        window.addEventListener('scroll', elems);
+    }
+    
+    //inViewport('button');
+    //inViewport('article');//  run the function on all article elements
+    
+    </script>
+ 
+<div class="pt-3"></div>
+
+<div class="pe-1 pb-1">
+    <div class="justify-content-end">
+        <button
+            type="button"
+            class="btn btn-danger btn-floating btn-lg"
+            id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div> 
+</div>
+
+<script>
+    window.addEventListener("load", async () => {
+        document.body.style.overflow = "hidden";
+        
+        document.getElementById("spinner").classList.add("animate-spinner")
+        
+        await setTimeout(() => { 
+            document.getElementById("spinner").classList.add("d-none"); 
+            document.body.style.overflow = "auto";
+        }, 750);
+    });
+let mybuttonn = document.getElementById("btn-back-to-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+    
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybuttonn.style.display = "block";
+      } else {
+        mybuttonn.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybuttonn.addEventListener("click", backToTop);
+    
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+const $audio = document.getElementById('kaz');
+    const $volume = document.getElementById('volume-div');
+    
+    
+    // To play an audio
+    
+    // function playAudio() {
+    //     $audio.play()
+    //   }
+      
+    //   // To pause an audio
+      
+    //   function pauseAudio() {
+    //     $audio.pause()
+    //   }
+      
+      //To forward an audio
+      
+      function forwardAudio() {
+        $audio.currentTime += 15.0
+      }
+      
+      //To rewind an audio
+      
+      function rewindAudio() {
+        $audio.currentTime -= 15.0
+      }
+      
+      // To stop or reset an audio
+      
+    //   function stopsong() {
+    //   $audio.currentTime = 0;}
+    
+      
+    // Set max value when you know the duration
+    $audio.onloadedmetadata = () => $seekbar.max = $audio.duration
+    // update audio position
+    $seekbar.onchange = () => $audio.currentTime = $seekbar.value
+    // update range input when currentTime updates
+    
+    $audio.addEventListener('ontimeupdate', async function () {
+      $audio.paused;
+      if( $seekbar.addEventListener("input") = true){
+        $seekbar.value = $audio.currentTime;
+    }else{
+      $audio.play();
+      document.getElementById('kaz').pause(); 
+         
+        buttons.classList.remove('bi-pause-fill');
+        buttons.classList.add('bi-play-fill');
+    }})
+    
+    $audio.addEventListener('timeupdate',function (){
+    
+    var sec= new Number();
+    var min= new Number();
+     sec = Math.floor( $audio.currentTime );    
+     min = Math.floor( sec / 60 );
+    min = min >= 10 ? min : '0' + min;    
+    sec = Math.floor( sec % 60 );
+    sec = sec >= 10 ? sec : '0' + sec;
+    
+    var sec2= new Number();
+    var min2= new Number();
+     sec2 = Math.floor( $audio.duration );    
+     min2 = Math.floor( sec2 / 60 );
+    min2 = min2 >= 10 ? min2 : '0' + min2;    
+    sec2 = Math.floor( sec2 % 60 );
+    sec2 = sec2 >= 10 ? sec2 : '0' + sec2;
+    
+    document.getElementById('duration').innerHTML = min2 + ":"+ sec2;
+    
+    document.getElementById('$seekbar').setAttribute('aria-valuetext',min + ":"+ sec);
+    document.getElementById('current-time').innerHTML = min + ":"+ sec;
+    
+    });
+    
+    const buttons = document.getElementById("play");
+    
+    buttons.addEventListener("click", () => {
+        //$audio.play();
+      
+    
+      if ($audio.paused) {
+        document.getElementById('kaz').play(); 
+        buttons.classList.remove('bi-play-fill');
+        buttons.classList.add('bi-pause-fill');
+        
+    
+    } else {
+        document.getElementById('kaz').pause(); 
+         
+        buttons.classList.remove('bi-pause-fill');
+        buttons.classList.add('bi-play-fill');
+    }
+    
+    }); 
+    // $audio.addEventListener('pause',function (){
+    // document.getElementById('play').play();
+    // });
+    // $audio.addEventListener('play',function (){
+    // document.getElementById('play').play();
+    // });
+    
+    // function SetVolume(val)
+    //     {
+    //         const player = document.getElementById('$audio');
+    //         player.volume = val / 100;
+    //     }
+        
+    
+    let volume = document.querySelector("#volume-control");
+    $audio.volume = 1;
+    volume.addEventListener("input", function(e) {
+    $audio.volume = e.currentTarget.value / 100;
+    })
+    
+    let seekbar = document.querySelector("#$seekbar");
+    seekbar.addEventListener("input", function(e) {
+    $audio.seekbar = e.currentTarget.value / 1528.267755;
+    })
+
+
+    function audioPlay(audio, typ){ 
+    return `<audio class="d-none" id="kaz" controls>
+        <source src="/dodaj/kazania/${audio}.${typ}">
+    </audio>` + `<div class="warning card">
+        <p class="text-danger">Niestety wygląda na to, że odtwarzacz audio nie działa w takim rozmiarze!</p>
+    </div>
+<div class="animate from-up delay-0 containeraudio container bg-light px-0" onmouseleave="$volume.classList.add('notshown');">
+        <button class="btn btn-light btn-audio" onclick="rewindAudio()">
+            <svg width="24" stroke-width="1.5" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/nauczanie/2000/svg"> <path d="M3 13C3 17.9706 7.02944 22 12 22C16.9706 22 21 17.9706 21 13C21 8.02944 16.9706 4 12 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M9 9L9 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M15 9L13 9C12.4477 9 12 9.44772 12 10L12 11.5C12 12.0523 12.4477 12.5 13 12.5L14 12.5C14.5523 12.5 15 12.9477 15 13.5L15 15C15 15.5523 14.5523 16 14 16L12 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 4L4.5 4M4.5 4L6.5 2M4.5 4L6.5 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+        </button>
+    <button id="play" class="fs-3 bi bi-play-fill btn btn-light btn-play"></button>
+        <button class="btn btn-light btn-audio btn-audio-2" onclick="forwardAudio()">
+            <svg width="24" stroke-width="1.5" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/nauczanie/2000/svg"> <path d="M21 13C21 17.9706 16.9706 22 12 22C7.02944 22 3 17.9706 3 13C3 8.02944 7.02944 4 12 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 4H19.5M19.5 4L17.5 2M19.5 4L17.5 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M9 9L9 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M15 9L13 9C12.4477 9 12 9.44772 12 10L12 11.5C12 12.0523 12.4477 12.5 13 12.5L14 12.5C14.5523 12.5 15 12.9477 15 13.5L15 15C15 15.5523 14.5523 16 14 16L12 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+        </button>
+    <span id="current-time" class="pe-2">00:00</span>
+    <input aria-label="Current Time" type="range" id="$seekbar" value="0" aria-valuetext="00:00" max="1528.267755" class="range">
+    <span id="duration" class="px-2 py-a" onmouseenter="$volume.classList.add('notshown');">00:00</span>
+    <button class="btn btn-light bi btn-volume" onmouseenter="$volume.classList.remove('notshown');" id="mute" onclick="if ($audio.muted) {$audio.muted = false; this.innerHTML = '` + '<i class = `bi-volume-up-fill`></i>' + `'; $volume.classList.remove('muted');} else {$audio.muted = true; this.innerHTML = '<i class = ` + '`bi-volume-mute-fill`></i>' + `; $volume.classList.add('muted');}"><i class = 'bi-volume-up-fill'></i></button>
+    <div id="volume-div" class="audioborder bg-light notshown row nomargin" onmouseenter="$volume.classList.remove('notshown');" onmouseleave="$volume.classList.add('notshown');">
+        <input type="range" id="volume-control" min="0" max="100" value="100" class="range2">
+    </div>
+</div>`
+
+    ;}
+
+
+
+
+    </script>

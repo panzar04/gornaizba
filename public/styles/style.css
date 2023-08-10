@@ -1,0 +1,936 @@
+.hmnabo{
+  background-image: url(/photos/home/k7.jpg);
+}
+.hmkalo{
+  background-image: url(/photos/spotkania/kalo_kontakt.jpg);
+}
+.hm3{
+  background-image: url(/photos/inne/3.png);
+}
+.hmkontakt{
+  background-image: url(/photos/home/k5.jpg);
+}
+.hmodkryj{
+  background-image: url(/photos/headery/onas.jpg);
+}
+.hmonas{
+  background-image: url(/photos/home/k3.jpg);
+  background-position: top;
+}
+.hm7{
+  background-image: url(/photos/spotkania/kawa_kontakt.jpg);
+  background-position: center;
+}
+.hmwiecej{
+  background-image: url(/photos/home/k6.jpg);
+}
+
+
+.nav-link{
+  color: #000000;
+}
+
+.nav{
+  --bs-nav-link-hover-color: #1d8880;
+}
+
+.img-pos-top{
+  object-position: top ;
+}
+.card-img-top-l{
+  height: 120%;
+}
+
+
+.other-bg{
+  background-color: #0f1f25;
+}
+.nav-link.active,.nav-link.hover, .bg-naszeLogo, .bg-gorna, .ciemnyturkusowy{
+  /* background-color: #7ba7b9; */
+  /* background-color:#4fa2a6; */
+  background-color: #1d8880;
+  --bs-nav-pills-link-active-bg:#1d8880;
+}
+
+/* .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: white;
+  background-color:#00a0df;
+} */
+/* .nav-pills {
+  --bs-nav-pills-link-active-bg: #fffb02;
+} */
+
+/* .nav-pills .nav-link {
+  color: #3b7d97;
+} */
+.bg-white{
+  background-color: #fff;
+}
+
+.dropdown-menu{
+  --bs-dropdown-link-active-bg: #4fa2a6;
+}
+/* #2a9490, #4fa2a6 */
+.animate-spinner {
+  animation-name: animate-spinner;
+  animation-timing-function: ease;
+  animation-duration: 0.75s;
+  /* animation-delay: 125ms; */
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-spinner {
+  0% {
+    opacity: 1;
+    filter: brightness(1.0) saturate(1.0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    filter: brightness(1.2) saturate(1.2);
+    transform:translateZ(1);
+  }
+}
+.naglowek {
+  font-weight: 300;
+  line-height: 5em !important;
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
+}
+
+.mnt{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.naglowek-mnt{
+  
+  /* font-weight: 300; */
+  /* line-height: 5em !important; */
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: uppercase;
+}
+
+.link-secondary{
+    text-decoration: none;
+}
+
+.link-secondary:hover{
+    text-decoration: underline;
+}
+
+.pagination{
+  padding-top: 1em;
+}
+
+#kaz{
+  width: inherit;
+}
+
+.accordion-body{
+  background-color: 
+  #f8f4f4;
+}
+
+.nav-item > .kk{
+  color:rgb(255, 255, 255)!important;
+}
+.nav-item > .kk:hover{
+  color: rgba(255, 255, 255, 0.692)!important;
+}
+
+.naszeLogo{
+    max-height: 2.5em;
+    width: auto;
+}
+/* 
+.bg-naszeLogo{
+    background-color:#3b7d97;
+    background-color:#4fa2a6;
+} */
+
+.font-naszeLogo{
+    text-shadow: 1px 1px 50px black;
+}
+
+.font-naszeLogo-b{
+    font-weight: 900;
+}
+
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+}
+
+.card-thing-padding{
+    padding-top: 5em;
+}
+
+.my-parallax {
+
+	background-color: var(--clr-dark);
+    background-image: url(../images/my-bg.jpg);
+  	/* if your image is too light you can use overlay to make it a bit dark */
+    background-blend-mode: overlay;
+  	/* this will create the parallax effect */
+  	background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* sociale */
+.fa-brands {
+    font-size: 30px;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    color: white;
+    transition: 0.2s;
+  }
+  .fa-facebook:hover {
+    color: rgb(67, 94, 192);
+  }
+  /* Youtube */
+  .fa-youtube {
+    color: white;
+    transition: 0.2s;
+  }
+  .fa-youtube:hover {
+    color: rgb(205, 67, 67);
+  }
+
+
+
+.sidepanel-width{
+  min-width: 10em;
+  max-width: 0.5vw;
+}
+
+
+.underlined:hover {
+  text-decoration: none;
+}
+
+/* #kim_jestesmy {
+  scroll-margin-top: 10em;
+}
+
+#w_co_wierzymy {
+  scroll-margin-top: 10em;
+
+}
+
+#nasi_przywodcy{
+  scroll-margin-top: 10em;
+
+} */
+
+#nasza_historia{
+  scroll-margin-top: 10em;
+
+}
+
+#spotkania{
+  scroll-margin-top: 10em;
+
+}
+
+.przywodcy {
+  max-height: 179px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.przywodcy-karta {
+  height: 15em;
+  min-height: 15em;
+}
+
+.top-strony {
+  height: 400px;
+  overflow: hidden;
+  object-fit:cover;
+}
+
+.category-info {
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.image{
+  position:relative;
+}
+
+.image img{
+  height:20em;
+  width: 100%;
+}
+
+.image h1{
+  position:absolute;
+  width:100%;
+  color:white;
+  line-height:6.5em;
+  margin:0;
+  font-family:Poppins, Open-Sans, 'Times New Roman', Times, serif 
+}
+
+.image h5{
+  position:absolute;
+  width:100%;
+  color:white;
+  line-height:16em;
+  margin:0;
+  font-family:Poppins, Open-Sans, 'Times New Roman', Times, serif 
+}
+
+.imagehome{
+  position:relative;
+  object-fit: contain;
+}
+
+.imagehome img{
+  height:30em;
+  width: 100%;
+}
+
+.imagehome h1{
+  position:absolute;
+  width:100%;
+  color:white;
+  line-height:10.5em;
+  margin:0;
+  font-family:Poppins, Open-Sans, 'Times New Roman', Times, serif 
+}
+
+.imagehome h5{
+  position:absolute;
+  width:100%;
+  color:white;
+  line-height:25em;
+  margin:0;
+  font-family:Poppins, Open-Sans, 'Times New Roman', Times, serif 
+}
+
+.top-strony-home {
+  height: 400px;
+  overflow: hidden;
+  object-fit:cover;
+}
+
+.uwie-pic {
+  object-position: 100% 80%;
+}
+
+.kontakt_zdj {
+  object-fit:cover;
+  height: 25em;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+
+.kontakt_okno {
+  width: calc(100%/3);
+}
+
+.h4_wiecej {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5em;
+}
+
+.h6_wiecej {
+  text-align: center;
+}
+
+.nabo_karta {
+  background-image: url(/photos/spotkania/nabo_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+}
+
+.kafelkanabo:hover {
+  cursor: pointer;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/spotkania/nabo_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.kalo_karta {
+  background-image: url(/photos/spotkania/kalo_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+}
+
+.kafelkakalo:hover {
+  cursor: pointer;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/spotkania/kalo_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.hovereffectkalo:hover {
+  text-decoration: underline;
+}
+
+.hovereffectkalo {
+  text-decoration: none;
+}
+
+.row-karta {
+  margin-right: 0;
+}
+
+.kawa_karta {
+  background-image: url(/photos/spotkania/kawa_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+}
+
+.kafelkakawa:hover {
+  cursor: pointer;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/spotkania/kawa_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.szdn_karta {
+  background-image: url(/photos/spotkania/szdn_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+}
+
+.kafelkaszdn:hover {
+  cursor: pointer;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/spotkania/szdn_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.media_karta_kontakt {
+  background-color: rgb(106, 44, 44);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+  text-shadow: 1px 1px black;
+}
+
+.borderradius-0 {
+  border-radius: 0%;
+}
+
+.fajny-shadow {
+  text-shadow: 1px 1px black;
+}
+
+.boan_karta {
+  background-image: url(/photos/wiecej/boan_inne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+}
+
+.kafelkaboan:hover {
+  cursor: pointer;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/wiecej/boan_inne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.fishe_karta {
+  background-image: url(/photos/wiecej/fishe_inne.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+}
+
+.kafelkafishe:hover {
+  cursor: pointer;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/wiecej/fishe_inne.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.f2p_karta {
+  background-image: url(/photos/wiecej/2p_inne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 20em;
+}
+
+.kafelka2p:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/wiecej/2p_inne.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.kafelkakalo,
+.kafelkanabo,
+.kafelkaszdn,
+.kafelkakawa,
+.kafelka2p,
+.kafelkaboan,
+.kafelkafriends,
+.kafelkafishe {
+  transition: 0.2s;
+}
+
+.kafelkanabo:hover,
+.kafelka2p:hover,
+.kafelkaboan:hover,
+.kafelkakawa:hover {
+  transform: translate(5px, 0%);
+}
+
+.kafelkafriends:hover,
+.kafelkakalo:hover,
+.kafelkafishe:hover,
+.kafelkaszdn:hover {
+  transform: translate(-5px, 0%);
+}
+
+/* .kafelkaszdn:hover, 
+.kafelkakalo:hover{
+  transform: scaleX(1.01);
+} */
+/* 
+{
+  transform: scaleY(1.03);
+} */
+
+
+
+.myCarouselSize {
+
+height: 35em;
+
+}
+
+.cur {
+  top: 50%;
+  /* left: 50%; */
+  margin: 0 auto;
+}
+
+.fa-envelope {
+  font-size: 30px;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10%;
+}
+
+.fa-envelope {
+  color: rgb(70, 70, 70);
+  transition: 0.2s;
+}
+.fa-envelope:hover {
+  color:rgb(143, 143, 143) ;
+}
+
+
+
+/* The actual popup */
+/* .popup .popuptext {
+  visibility: hidden;
+  width: 15em;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  overflow: hidden;
+} */
+
+/* Popup arrow */
+/* .popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  overflow: hidden;
+} */
+/* 
+/* Toggle this class - hide and show the popup 
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup)
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+} */
+
+.nabo_karta_kontakt {
+  background-color:#95b7c4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30em;
+  /* text-shadow: 1px 1px black; */
+}
+
+#mail {
+  background: transparent;
+border: none;
+cursor: pointer;
+}
+
+.fa-envelope {
+  color: white;
+}
+
+.fa-envelope:hover {
+  color: rgb(164, 164, 164);
+}
+
+.fa-instagram {
+  color:white ;
+  transition: 0.2s;
+}
+.fa-instagram:hover {
+  color: #d6249f;
+}
+/* 
+.kalokarta {
+  margin-left: 3.15em;
+} */
+
+.fa-kalo {
+  width: 1.5em;
+}
+
+.kontaktrow > .row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.kontaktwidth {
+  
+  width: 100%;
+  margin: 0
+}
+
+.kalo_karta_kontakt {
+  background-image: url(/photos/spotkania/kalo_kontakt.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30em;
+}
+
+.ikonykontakt {
+  margin-left: 35% ;
+  margin-right: 35%;
+  width: 30%;
+}
+
+
+
+.ikonki{
+  /* --bs-gutter-x: 0 !important; */
+  flex-wrap:nowrap !important;
+}
+
+#mail {
+  padding-bottom: 15px;
+}
+
+.wcokafelka {
+  height: 6em;
+  background-color: #3b7d9783;
+  cursor: pointer;
+  color: #fff;
+}
+.wcokafelka:hover {
+  background-color:#3b7d9760;
+  color:#6a95a6;
+}
+
+.wcokafelkatekst{
+  padding-top: 30%;
+  padding-bottom: 60%;
+  height: 10%;
+}
+
+
+.wcokafelkatekstduzy{
+  padding-top: 25%;
+  padding-bottom: 65%;
+  height: 10%;
+  font-size: smaller;
+}
+
+.konkafelka{
+  width: 90%;
+}
+
+.adreskafelka {
+  --bs-gutter-x: 0rem;
+}
+.kontaktwidth{
+  width: 22.5em;
+}
+
+.friends_karta {
+  background-image: url(/photos/wiecej/przyjaciele.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20em;
+}
+
+.kafelkafriends:hover {
+  cursor: pointer;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(98, 95, 95, 0.45)
+  ),
+  url(/photos/wiecej/przyjaciele.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.spinner-bg{
+  height: 102%;
+  width: 100%;
+  position: absolute;
+  z-index: 2000;
+  top: -1em;
+  
+}
+
+
+
+.przyjaciele{
+  cursor: pointer;
+  height: 17em;
+}
+
+.nabotlo{
+  background-color: #295465;
+}
+
+.nabo{
+  background-color: #333;
+}
+
+/* .ciemnyturkusowy{
+  background-color:#5697b1;
+  background-color:#4fa2a6
+} */
+
+.homeobraz {
+  object-fit: cover;
+  object-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* footer{
+  background-image: url(/photos/inne/2.jpg);
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+footer{
+  background-color: #7ba7b9;
+}
+
+.footerr{
+  background-color: #7ba7b9;
+  color:#7ba7b9 ;
+}
+
+polyline{  stroke: rgba(255, 255, 255, 0.616) !important;
+}
+
+.ciemnykolor {
+  background-color: #1b3742;
+}
+
+.ciemnykolor2 {
+  background-color: #0f1f25;
+}
+
+.mapa{
+  background-color: white;
+}
+
+.wco{
+  background-color: white;
+}
+
+
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 9999;
+}
+
+#inputakt{
+  width: 100%;
+  padding-right: 25%;
+  padding-left: 25%;
+}
+
+
+
+.autor {
+  font-size: smaller;
+}
+
+.dropend:hover,
+.dropend:hover>.dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.md{
+  margin-left: 10em;
+  top:-2.6em;
+}
+
+
+.spinner{position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; 
+}

@@ -1,0 +1,50 @@
+<% layout('layouts/admin')%>
+<% let num = Math.ceil(Math.random()*10); %>
+<head>
+    <style>
+        .fs--1{
+            font-size: 15em;
+        }
+    </style>
+</head> 
+<div class="row nomargin justify-content-center pt-3 pb-2">
+    <div class="col"></div>
+    <div class="col-6 text-center">
+        <h1>Co chcesz dzisiaj zrobić?</h1>
+        <% if(num == 1){ %>
+            <h5>Błogosławieni ubodzy w duchu, ponieważ do nich należy królestwo niebieskie.</h5>
+        <% }else if(num == 2){ %>
+            <h5>Błogosławieni, którzy się smucą, ponieważ oni będą pocieszeni.</h5>
+        <% }else if(num == 3){ %>
+            <h5>Błogosławieni cisi, ponieważ oni odziedziczą ziemię.</h5>
+        <% }else if(num == 4){ %>
+            <h5>Błogosławieni, którzy łakną i pragną sprawiedliwości, ponieważ oni będą nasyceni.</h5>
+        <% }else if(num == 5){ %>
+            <h5>Błogosławieni miłosierni, ponieważ oni dostąpią miłosierdzia.</h5>
+        <% }else if(num == 6){ %>
+            <h5>Błogosławieni czystego serca, ponieważ oni zobaczą Boga.</h5>
+        <% }else if(num == 7){ %>
+            <h5>Błogosławieni czyniący pokój, ponieważ oni będą nazwani synami Bożymi.</h5>
+        <% }else if(num == 8){ %>
+            <h5>Błogosławieni, którzy cierpią prześladowanie z powodu sprawiedliwości, ponieważ do nich należy królestwo niebieskie.</h5>
+        <% }else if(num == 9){ %>
+            <h5>Błogosławieni jesteście, gdy z mego powodu będą wam złorzeczyć,
+                prześladować was i mówić kłamliwie wszystko, co złe, przeciwko wam.</h5>
+        <% }else if(num == 10){ %>
+            <h5>Wy jesteście światłością świata. Nie może się ukryć miasto położone na górze.</h5>
+        <% } %>    
+
+        <div class="fs--1"><i class="bi bi-emoji-smile"></i></div>
+
+        <% 
+        const d = new Date();
+        let year = d.getFullYear(); 
+        %>
+        <% if (year === 2049) { %>
+            <p class="text-danger fs-7">Uwaga: <small>Sekcje "Artykuły" i "Nauczania" przestaną działać w 2051 roku jeśli nie zostaną zaktualizowane! Potrzebne jest uzupełnienie tych lat w kodzie!</small></p>
+        <% } else if (year === 2050){ %>
+            <p class="text-danger fs-7">Uwaga: <small>Sekcje "Artykuły" i "Nauczania" przestaną działać w 2051 roku jeśli nie zostaną zaktualizowane!! Potrzebne jest uzupełnienie tych lat w kodzie!</small></p>
+        <% } %>
+    </div>
+    <div class="col"></div>
+</div>

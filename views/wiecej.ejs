@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate')%>
+<div class="ciemnykolor2">
+    <div class="animate from-up delay-0 category-info pb-0 mb-0" style="width: 100%;user-select: none;">
+        <div class="image">
+            <h1 class="naglowek display-4">Więcej</h1>
+            <img src="/photos/home/k6.jpg" class="top-strony"/>
+        </div>
+    </div class="">
+
+    <div class="animate from-up delay-ms-10 row row-karta borderradius-0">
+        <div id="2pBtn" class="col p-0 m-0 f2p_karta bg-light borderradius-0 kafelka2p fajny-shadow"></div>
+        <div id="fishBtn" class="col p-0 m-0 fishe_karta text-light borderradius-0 kafelkafishe fajny-shadow">
+            <h4 class="h4_wiecej text-center text-light">Fisheclectic</h4>
+            <h6 class="h6_wiecej text-center"></h6>
+        </div>
+    </div>
+    <div class="row row-karta borderradius-0">
+        <div id="boanBtn" class="animate from-up delay-ms-20 col p-0 m-0 boan_karta bg-light borderradius-0 kafelkaboan fajny-shadow">
+            <h4 class="h4_wiecej text-center text-light">Boanerges</h4>
+            <h6 class="h6_wiecej text-center text-light"></h6>
+        </div>
+        <div id="friendsBtn" class="animate from-up delay-ms-20 col p-0 m-0 friends_karta bg-light borderradius-0 kafelkafriends fajny-shadow">
+            <h4 class="h4_wiecej text-center text-light">Nasi Przyjaciele</h4>
+            <h6 class="h6_wiecej text-center text-light"></h6>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("2pBtn").addEventListener("click", function() {
+        window.open("http://fundacja2p.pl/");
+    });
+    document.getElementById("fishBtn").addEventListener("click", function() {
+        window.open("https://fisheclectic.com/");
+    });
+    document.getElementById("boanBtn").addEventListener("click", function() {
+        window.open("https://boanerges.pl/");
+    });
+    document.getElementById("friendsBtn").addEventListener("click", function() {
+        location.href = "/nasiprzyjaciele";
+    });
+</script>

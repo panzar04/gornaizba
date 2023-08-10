@@ -1,0 +1,48 @@
+
+.containerr {
+  position: relative;
+}
+
+.imagee {
+  opacity: 1;
+  display: block;
+  height: 17em;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width:100%;
+  object-fit: contain;
+}
+
+
+.middlee {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.containerr:hover .imagee {
+  opacity: 0.9;
+  filter: brightness(33%);
+}
+
+.containerr:hover .middlee {
+  opacity: 1;
+  filter: brightness(100%);
+}
+
+.textt {
+  background-color: #00000080;
+  color: white;
+  /* font-size: 16px; */
+  padding: 16px 15px;
+}
+
+.textt > h6{
+    width: 10em;
+    font-size: larger;
+}
+

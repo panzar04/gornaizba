@@ -1,0 +1,119 @@
+<% layout('layouts/boilerplate')%>
+<head>
+  <style>
+      .card-img-top{
+          max-height: 24em;
+          object-fit: cover;
+          width: 50em;
+      }
+  </style>
+</head>
+<div id="addBg" class="invisible"><br></div>
+<% const monthNames = ['Stycznia', 'Lutego', 'Marca','Kwietnia', 'Maja', 'Czerwca', 'Lipca','Sierpnia', 'Września', 'Października','Listopada', 'Grudnia']; function addZero(i) {if (i < 10) {i = "0" + i}return i;}let h = addZero(artykul.data.getHours());let m = addZero(artykul.data.getMinutes());let time = h + ":" + m; %> 
+<% const data = `(${artykul.data.getDate()} ${monthNames[artykul.data.getMonth()]} ${artykul.data.getFullYear()} | ${time})` %>
+<% function autor(str){ %> 
+    <% if (!str) { %>
+        <% return } else { %>
+                Autor: <%= str %>
+        <% }}%> 
+<% function photo(str,alt,tytul,tekst,autor){ %> 
+    <% if (!str) { %>
+            <h5 class="card-title pt-0 fs-2"><%= tytul %> - <%= autor %></h5>
+            <div class="row nomargin mb-3">
+              <div class="col"></div>
+              <div class="col-7"><p class="card-text"><%= tekst %></p></div>
+              <div class="col"></div>
+            </div>
+        <% } else { %> 
+            <h5 class="card-title pt-0 fs-2"><%= tytul %> - <%= autor %></h5>
+            <img src="/dodaj/artykuly-zdjecia/<%= str %>" class="card-img-top my-3" alt="<%= alt %> ">
+            <div class="row nomargin mb-3">
+              <div class="col"></div>
+              <div class="col-7"><%= tekst %></div>
+              <div class="col"></div>
+            </div>
+        <% }}%> 
+
+<% function pdf(pdf) { if(!pdf){return}else{ %>
+<iframe
+      src="/dodaj/artykuly/<%= artykul.pdf %>.pdf"
+      width="80%"
+      height="800px"
+      style="border: none;"
+      class="pb-4"
+    >
+      <p>
+        Twoja przeglądarka nie wspiera PDF-ów.
+        <a href="../dodaj/artykuly/<%= artykul.pdf %>.pdf">Pobierz PDF</a>
+      </p>
+    </iframe><br>
+  
+<% } }%>
+<% function trescArt() { %>
+  <article class="card text-center mx-5 my-3">
+    <div class="card-header">
+        <%= data %>
+    </div>
+    <div class="card-body">
+      <%= photo(artykul.zdjecie, artykul.alt, artykul.tytul, artykul.tekst, artykul.autor) %> 
+      <!-- <h5 class="card-title pt-3 fs-3"><%= //artykul.tytul %></h5> -->
+      
+      <%= pdf(artykul.pdf) %>
+      
+<% } %>
+<% if(currentUser){ %> 
+      <%= trescArt() %> 
+      <a href="/artykuly" class="btn btn-secondary">
+        Wróć do artykułów <i class="bi bi-arrow-return-left"></i>
+        </a>
+        
+      <a href="/artykuly/<%= artykul._id %>/edit" class="btn btn-success">
+        Edytuj
+        </a>
+<% }else{ %> 
+      <%= trescArt() %>
+      <a href="/artykuly" class="btn btn-secondary">
+        Wróć do artykułów <i class="bi bi-arrow-return-left"></i>
+        </a>
+<% } %>  
+<% if (!artykul.pdf) { %>
+    <% console.log('Brak pdf-u') %>
+<% } else { %>
+  <a href="../dodaj/artykuly/<%= artykul.pdf %>.pdf" class="btn btn-primary">Pobierz PDF</a>
+<% } %>
+
+
+<% if(currentUser) {%>  
+<!-- DELETE DELETE DELETE -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Usuń
+</button>
+    </div>
+  </article>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Czy na pewno chcesz to zrobić?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Po usunięciu nie będzie można odzyskać artykułu!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+          <form action="/artykuly/<%=artykul._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Usuń</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<% }else { %>
+  </div>
+  </article>
+<% } %> 
+
+<div id="addBg" class="invisible"><br></div>

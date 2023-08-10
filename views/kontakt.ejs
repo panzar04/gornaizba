@@ -1,0 +1,159 @@
+<% layout('layouts/boilerplate')%>
+
+
+<div class="animate from-up delay-0 category-info mb-0" style="width: 100%;user-select: none;">
+    <div class="image">
+        <h1 class="naglowek display-4">KONTAKT</h1>
+        <img src="/photos/home/k5.jpg" class="top-strony" style="object-position: bottom;"/>
+    </div>
+</div>
+<section class="bg-light">
+    <div class="row row-karta">
+        <div id="naboBtn" class="animate from-up delay-ms-10 col-12 col-md-6 p-0 m-0 nabo_karta_kontakt">
+            <h4 class="h4_wiecej text-center text-light"><a class="text-light hovereffectkalo" href="/nabozenstwa">Nabożeństwo w Górnej Izbie</a></h4>
+            <h6 class="h6_wiecej text-center text-light">Każda niedziela o 11:00</h6>
+            <div class="ikonykontakt">
+                <div class="pt-5 mt-5 ikonki row">
+                    <a onclick="gornafb()" class="col fa-brands fa-kalo fa-facebook p-0 mb-0 mb-sm-3 pointer" id="kalofb"></a>
+                    <a onclick="gornayt()" class="col fa-brands fa-kalo fa-youtube p-0 pointer"></a>
+                    <button onclick="copyText1(); myFunction()" id="mail" class="col fa-solid fa-kalo fa-envelope pt-0 ps-0 pe-0"></button>
+                </div>
+            </div>
+        </div>
+        <div id="kaloBtn" class="animate from-up delay-ms-20 col-12 col-md-6 p-0 m-0 kalo_karta_kontakt bg-light borderradius-0 kontakt_row">
+            <h4 class="h4_wiecej text-center text-light"><a class="text-light hovereffectkalo" href="/kaloryfer">Kaloryfer</a></h4>
+            <h6 class="h6_wiecej text-center text-light">Każdy piątek roku szkolnego o 18:00</h6>
+            <div class="ikonykontakt">
+                <div class="pt-5 mt-5 ikonki row">
+                    <a onclick="kalofb()" class="col fa-brands fa-kalo fa-facebook p-0 mb-0 mb-sm-3" id="kalofb"></a>
+                    <a onclick="kaloig()" class="col fa-brands fa-kalo fa-instagram p-0"></a>
+                    <button onclick="copyText(); myFunction()" id="mail" class="col fa-solid fa-kalo fa-envelope pt-0 ps-0 pe-0"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="animate from-up delay-ms-25 row adreskafelka justify-content-center align-items-center mt-4">
+        <div class="row m-0 justify-content-between text-dark borderradius-0 konkafelka mb-5">
+            <div class="col-12 col-md-4  kontaktwidth me-3 ps-0">
+                <h4 class="text-start ps-lg-5 ps-sm-3 pt-4 text-dark">Adres</h4>
+                <p class="text-start ps-lg-5 ps-sm-3 text-wrap">
+                    Chrześcijańska Wspólnota Górna Izba<br>
+                    Zbór Kościoła Bożego w Chrystusie<br>
+                    ul. Słoneczna 6/8<br>
+                    66-400 Gorzów Wlkp<br>
+                    <hr>
+                    <p id="Mapa" class="ps-5 pb-2">gorzow@kbwch.pl</p> 
+                </p>
+            </div>
+            <div class="col-12 col-md-4 pt-1 kontaktwidth pb-5 pe-0 me-3">
+                <h4 class="text-start ps-lg-5 ps-sm-3 pt-5 text-dark">Konto</h4>
+                <p class="text-start ps-lg-5 ps-sm-3 text-wrap">
+                    ING Bank Śląski S. A.<br>
+                    63 1050 1520 1000 0090 6379 5414<br>
+                </p>
+            </div>
+            <div class="col-12 col-md-4 pt-1 kontaktwidth pb-5 me-3">
+                <h4 class="text-start ps-lg-5 ps-sm-3 pt-5"></h4>
+                <p class="text-start ps-lg-5 ps-sm-3 text-wrap">
+                    NIP 599-27-87-909<br>
+                    Regon 211243618<br>
+                    Wpisany do Rejestru Kościołów<br>
+                    Związków Wyznaniowych Dział A poz. 28<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="animate from-up delay-ms-15 col-12 p-0 m-0 pt-lg-0 pt-sm-2">
+        <div class="mapa">
+        </div>
+        <div>
+            <!-- <div class="loading">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div> -->
+                <div id="loader" height="440" width="100%" style="z-index: 997;">
+                    <div class="">
+                        <div class="spinner">
+                            <div class="spinner-border text-dark" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?zoom=100&pb=!1m18!1m12!1m3!1d2416.3603400529587!2d15.202062115815128!3d52.725689779853724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47071fc91d7de363%3A0xf3dda067127c5baf!2zQ2hyemXFm2NpamHFhHNrYSBXc3DDs2xub3RhICJHw7NybmEgSXpiYSIsIFpiw7NyIEtvxZtjaW_FgmEgQm_FvGVnbyB3IENocnlzdHVzaWUgdyBHb3J6b3dpZQ!5e0!3m2!1spl!2spl!4v1689689803749!5m2!1spl!2spl" 
+                class='' alt="ulica Słoneczna 6, Gorzów Wielkopolski 66-400" width="100%" height="440" style="border:0; z-index: 999;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- </div> -->
+        </div>
+    </div>
+</section>
+ <div id="snackbar">Skopiowano adres email do schowka!</div>
+ <script>
+ 
+ 
+ // Define a function to check if Google Maps is loaded
+    function isGoogleMapsLoaded() {
+      return typeof google !== 'undefined' && typeof google.maps !== 'undefined';
+    }
+    const loader = document.getElementById('loader');
+    // Attach an event listener to the DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if Google Maps is loaded
+      if (isGoogleMapsLoaded()) {
+        // Google Maps is loaded
+        console.log('Google Maps loaded!');
+        // Your additional code here
+        loader.classList.toggle("d-none");
+      } else {
+        // Google Maps is not loaded
+        loader.classList.innerHTML('<span class="text-danger fs-5">Niestety nie udało się załadować mapy!</span><br><p>ulica Słoneczna 6, Gorzów Wielkopolski 66-400</p>');
+        console.log('Google Maps not loaded!');
+      }
+    });
+    
+    function gornafb(){
+        window.open("https://www.facebook.com/gornaizba/")
+    };
+
+    function gornayt(){
+        window.open("https://www.youtube.com/channel/UCzaAQ9QwLpa7Zrjn3KR_OoA")
+    };
+
+    function kalofb() {
+        window.open('https://www.facebook.com/kaloryfergorzow/')
+    };
+
+    function kaloig() {
+        window.open("https://www.instagram.com/kaloryfer_wmn/")
+    };
+
+    
+    function copyText() {
+  
+        /* Copy text into clipboard */
+        navigator.clipboard.writeText
+            ("kaloryferfromgorzow@gmail.com");
+    }
+
+    function copyText1() {
+  
+  /* Copy text into clipboard */
+  navigator.clipboard.writeText
+      ("gorzow@kbwch.pl");
+    }
+
+    function myFunction() {
+  const x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}overList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+
+// const loadingSpinner = document.querySelector('.loading');
+
+// window.addEventListener('load', function() {
+//     loading.classList.add('invisible');
+// }
+
+
+
+</script>

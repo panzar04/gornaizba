@@ -1,0 +1,78 @@
+<% layout('layouts/admin')%>
+<head>
+    <style>
+        .card-img-top{
+            max-height: 20em;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<% function isOld(dataPosta){const dataTeraz = new Date();const limit = 395 * 24 * 60 * 60 * 1000;const roznica = dataTeraz.getTime() - dataPosta.getTime();if(roznica >= limit){    return true}else{    return false} }%> 
+
+<% const monthNames = ['stycznia', 'lutego', 'marca','kwietnia', 'maja', 'czerwca', 'lipca','sierpnia', 'września', 'października','listopada', 'grudnia'];  %> 
+<% function tresc (string, limit) {return string.substring(0, limit);}; %>  
+<% function tekst(str, num, link){ %> 
+    <% if (str.length > num) { %>
+        <%= tresc(str, num)%>... [<a href="/aktualnosci/<%=link%>">Przeczytaj do końca</a>]</p></div><div class="col bm">
+        <% } else if (!str) {%>
+            </p></div><div class="col mt-0">
+            <%} else {%>
+            <%= str %> </p></div><div class="col bm">
+        <% } %> 
+<% } %> 
+<% function autor(str){ %> 
+    <% if (!str) { %>
+        <% return } else { %> 
+        <p class="d-block d-md-inline autor ps-md-2 ps-lg-2 mb-0 mb-md-2 pb-md-1 mb-md-1"><small class="text-muted">(<%= str %>)</small></p>
+        <% }}%> 
+
+<% function photo(str,alt){ %> 
+    <% if (!str) { %>
+        <% return } else { %> 
+            <img src="/dodaj/aktualnosci-zdjecia/<%= str %>" class="card-img-top" alt="<%= alt %> ">
+        <% }}%> 
+
+
+
+
+
+
+<p class="pt-4 text-center">Posty poniżej są starsze niż 365 dni i nie wyświetlają się już w sekcji <b>Aktualności.</b></p>
+<ul class="list-group list-group-flush">
+    <% for (let post of posty.reverse()) {%>
+    <% if(isOld(post.data)){ %>  
+        <div class="row nomargin">
+            <div class="col"></div>
+            <div class="col-lg-6 col-md-8 col-10">
+                <article class="card mb-3">
+                    <%= photo(post.zdjecie, post.alt) %> 
+                    <div class="card-body">
+                        <div class="d-sm-flex justify-content-between mb-sm-1">
+                            <h5 class="card-title mb-0"><%= post.tytul %> <%= autor(post.autor) %> 
+                                <form class="ps-2 d-inline" action="/aktualnosci/<%=post._id%>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger">Usuń</button>
+                              </form></h5>
+                            <p class="card-text ps-auto"><small class="text-muted">
+                            <%= post.data.getDate() %>
+                            <%= monthNames[post.data.getMonth()] %>
+                            <%= post.data.getFullYear() %></small></p>
+                        </div>
+                        <div class="row nomargin">
+                            <div class="col-10">
+                                <p class="card-text">
+                                    <%= tekst(post.tekst,130,post._id) %>
+                            <!--</p>
+                            </div> (tak ma być)
+                            <div class="col bm/mt-0"> -->
+                                <div class="row nomargin">
+                                    <a class="col btn btn-primary d-block ms-auto mt-auto" href="/aktualnosci/<%= post._id %>">Otwórz</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col"></div>  
+        </div>    
+    <% }else {continue}} %>
+</ul>

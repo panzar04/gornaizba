@@ -1,0 +1,106 @@
+<% layout('layouts/boilerplate')%>
+<%- include('./gora') %>
+
+<head>
+    <style>
+        #naucz{
+            width: inherit;
+            
+        }
+        .in{
+            width: inherit;
+        }
+        .kazanietlo {
+            background-color: #f8f4f4;
+        }
+    </style>
+</head>
+<% function displayID(e) { %>
+    <% if (currentUser) { %>
+        <p class="text-primary mb-0">ID: <%= e %></p>
+    <% } %>
+<% } %>
+
+<% function displaybuttons() { %>
+    <% if (currentUser) { %>
+      <div class="mt-1">
+        
+        <a href="/admin/kazania/<%= kazanie._id %>/edit" class="btn btn-success">
+          Edytuj
+      </a>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          Usuń
+      </button>
+    </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel2">Czy na pewno chcesz to zrobić?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Po usunięciu nie będzie można odzyskać kazania!
+                  <br>
+                (Plik audio nadal pozostanie w folderze)
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+                <form action="/admin/kazania/<%=kazanie._id%>?_method=DELETE" method="POST">
+                  <button class="btn btn-danger">Usuń</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    <% } %>
+<% } %>
+
+
+<% const monthNames = ['stycznia', 'lutego', 'marca','kwietnia', 'maja', 'czerwca', 'lipca','sierpnia', 'września', 'października','listopada', 'grudnia']; %>
+<article class="my-5">
+    <div class="row nomargin">
+        <div class="col"></div>
+        <div class="col-lg-6 col-md-8 col-10 mb-2">
+            <% if(kazanie.link){ %>
+                <% } %>
+            <div id="accordion<%= kazanie._id %>" class="card border-info">
+                <div class="card-header text-secondary fs-7">
+                    <%= kazanie.data.getDate() %>
+                    <%= monthNames[kazanie.data.getMonth()] %>
+                    <%= kazanie.data.getFullYear() %> 
+                    <%= displayID(kazanie._id) %>
+                </div>
+                <div class="card-body row nomargin">
+                    <div class="col-7"> 
+                        <h5 class="card-title"><%= kazanie.tytul %> </h5>
+                        <p class="card-text"><%= kazanie.mowca %></p>
+                    </div>
+                    <div class="col-sm-5 col-12 pt-3 pt-sm-0 text-end"> 
+                        <% if(kazanie.link){ %>
+                            <a class="btn btn-outline-danger btn-audio" href="<%= kazanie.link %>" target=”_blank”><i class="bi bi-youtube fs-2 move-icon"></i></a>
+                        <% } %>
+                        <a class="btn btn-outline-secondary btn-audio" href="/dodaj/kazania/<%= kazanie.audio %>.<%= kazanie.typ %>" download><i class="bi bi-download fs-2 move-icon"></i></a>
+                        
+                    </div>
+                </div>
+                
+              <div class="card kazanietlo">
+                <audio id="naucz" class='' controls src='/dodaj/kazania/<%= kazanie.audio %>.<%= kazanie.typ %>'></audio>
+          </div>
+              </div>
+              <!-- <div id="collapse<%= kazanie._id %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= kazanie._id %>">
+                <div id="acrdn-<%= kazanie._id %>" class="accordion-body card">
+                  Loading...
+                </div>
+              </div> -->
+
+            <%= displaybuttons() %>
+
+        </div>
+        <div class="col"></div>  
+    </div>
+</div>
+</article>

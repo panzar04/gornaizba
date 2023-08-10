@@ -1,0 +1,59 @@
+<% layout('layouts/admin')%>
+<% const date = new Date(); %> 
+<h1 class="text-center pt-3">Nowe Kazanie</h1>
+<div class="row row-cols-3 nomargin my-5 p-3">
+    
+<div class="col-6 offset-3">
+<form action="/admin/kazania" method="POST" class="container">
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col-5">
+            <label for="mowca" class="form-label">Mówca</label><br>
+            <input type="text" class="form-control" id="mowca" name="kazanie[mowca]" required>
+        </div>
+    </div>
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col-12">
+            <label for="tytul" class="form-label">Tytuł</label><br>
+            <input type="text" class="form-control" id="tytul" name="kazanie[tytul]" required>
+        </div>
+    </div>
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col-9">
+            <label for="audio" class="form-label">Audio</label><br>
+            <input type="text" class="form-control" id="audio" name="kazanie[audio]" placeholder="nazwa" required>
+        </div>
+        <div class="col-3">
+            <label for="typ" class="form-label">Typ pliku</label><br>
+            <input type="text" class="form-control" id="typ" name="kazanie[typ]" value="mp3" required>
+        </div>
+        <!-- <div>
+            <label for="opis" class="form-label">Opis</label>
+            <textarea type="text" class="form-control" id="opis" name="kazanie[opis]" class="form-control" rows="6"></textarea>
+        </div> -->
+    </div>
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col-12">
+            <label for="tytul" class="form-label">Link YouTube</label><br>
+            <input type="text" class="form-control" id="link" name="kazanie[link]">
+        </div>
+    </div>
+    <div class="row nomargin mb-3 justify-content-between">
+        <div class="col">
+            <label for="data" class="form-label">Data</label><br>
+            <input type="date" class="form-control" id="data" name="kazanie[data]">
+        </div>
+    </div>
+    <div>
+        <button class="d-inline btn btn-success m-2 ms-0">Dodaj</button>
+        <a class="d-inline btn btn-secondary m-2 pb-2" href="/nauczanie">
+            Anuluj
+        </a>
+    </div>
+</form>
+</div>
+</div>  
+<div class="my-4 py-3 invisible"><p class="my-5 py-4">padding</p></div>
+
+<script>
+    document.getElementById('data').valueAsDate = new Date();
+</script>

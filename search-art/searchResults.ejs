@@ -1,0 +1,59 @@
+<% layout('layouts/boilerplate')%>
+<%- include('./gora') %>
+
+<% const monthNames = ['stycznia', 'lutego', 'marca','kwietnia', 'maja', 'czerwca', 'lipca','sierpnia', 'września', 'października','listopada', 'grudnia']; %>
+<input id='searchBar' value='<%= search %>' class="form-control justify-content-center" type="text" placeholder="Wpisz nazwę nauczania lub konkretnego mówcę..." onkeyup="sendData(this)">
+<section id="searchResults">
+    <hr>
+</section>
+
+
+
+<script>
+const monthNames = ['stycznia', 'lutego', 'marca','kwietnia', 'maja', 'czerwca', 'lipca','sierpnia', 'września', 'października','listopada', 'grudnia']; 
+
+function sendData(e) {
+    let match = e.value.match(/^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻżáéíóúüñ¿¡!@#$%^&*()_+-=§£§ ]*/);
+    let match2 = e.value.match(/\s*/);
+    if(match2[0] === e.value){
+        searchResults.innerHTML= ''
+        return;
+    }
+    if (match[0] === e.value){
+        fetch('search', {
+        method: 'POST',
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify({payload:e.value})
+    }).then(res => res.json()).then(data => {
+        let payload = data.payload;
+        searchResults.innerHTML = '';
+        if(payload.length < 1){
+            searchResults.innerHTML = '<div class="alert alert-danger" role="alert">Niestety! Brak wyników dla tego hasła.</div>';
+            return;
+        }
+        payload.sort((a, b) => new Date(b.data) - new Date(a.data));
+        payload.forEach((item, index) => {
+            if(index > -1) searchResults.innerHTML += '<hr>';
+            const nowaData = new Date(item.data);
+            //function addZero(i) {if (i < 10) {i = "0" + i}return i;}let h = addZero(nowaData.getHours());let m = addZero(nowaData.getMinutes());let time = h + ":" + m;
+            const data = `${nowaData.getDate()} ${monthNames[nowaData.getMonth()]} ${nowaData.getFullYear()}`;
+            //searchResults.innerHTML = "<hr>"
+            const link = `./${item._id}`
+            
+            searchResults.innerHTML += `
+            <div class="alert alert-light" role="alert">
+                <a href='${link}' class="link-secondary" target="_parent">${item.tytul} - ${item.mowca} (${data})</a>
+            </div>`;
+            
+        });  
+    });
+    return;
+    }
+    searchResults.innerHTML = '';
+};
+
+function sendSearchPhrase(phrase) {
+    document.getElementById('searchBar').value = phrase; // Set the value of the search bar
+    sendData(document.getElementById('searchBar')); // Trigger the search
+}
+</script>

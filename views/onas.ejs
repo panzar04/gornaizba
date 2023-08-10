@@ -1,0 +1,196 @@
+<% layout('layouts/boilerplate') %> 
+
+<% const kim = include('./partials/o_nas/kim_jestesmy'); %>
+<% const wco = include('./partials/o_nas/w_co'); %>
+<% const jacy = include('./partials/o_nas/jacy_jestesmy'); %>
+<% const jacy_sm = include('./partials/o_nas/jacy_jestesmy-sm'); %>
+<% const lid = include('./partials/o_nas/liderzy'); %>
+<% function gora() { %>
+  <div class="animate from-up delay-0 category-info" style="width: 100%;user-select: none;">
+    <div class="image">
+        <h1 class="naglowek display-4">O NAS</h1>
+        <img src="/photos/home/k3.jpg" class="top-strony"/>
+    </div>
+</div>
+<% } %>
+
+<head>
+<link rel="stylesheet" href="/styles/onas.css">
+</head>
+
+<!-- xs+ -->
+<div class="row nomargin d-block d-md-none">
+  <nav id="navbar-example2" class="navbar px-3 mb-3 justify-content-center bg-white card">
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link " href="#kim_jestesmy_mobile">Kim jesteśmy?</a> 
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link " href="#w_co_wierzymy_mobile">W co wierzymy?</a>
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link " href="#jacy_jestesmy_mobile">Jacy jesteśmy?</a>
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link " href="#historia_mobile">Nasza historia</a>
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link " href="#liderzy_mobile">Nasi liderzy</a>
+      </li>
+    </ul>
+  </nav>
+  <nav id="" class="position-relative invisible navbar px-3 justify-content-center bg-white card">
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link" href="">Kim jesteśmy?</a>
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link" href="">W co wierzymy?</a>
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link" href="">Jacy jesteśmy?</a>
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link" href="">Nasza historia</a>
+      </li>
+      <li class="nav-item fs-7 px-1">
+        <a class="nav-link" href="">Nasi liderzy</a>
+      </li>
+    </ul>
+  </nav>
+  <%= gora() %>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+    <div id="kim_jestesmy_mobile" class=" scroll-higher-1">
+      <h1 class="text-center display-1 bold">Kim jesteśmy?</h1>
+      <%- kim %>
+    </div>
+    <div id="zolte_tlo" class="pb-1 sh">
+      <h1 class="text-center display-1 bold pb-1">W co wierzymy?</h1>
+      <div class="mx-2 px-2 px-sm-0 mb-5 mb-sm-0">
+        <%- wco %>
+      </div>
+    </div>
+    <div id="w_co_wierzymy_mobile" class=" scroll-higher-1">
+      <h1 class="text-center display-1 bold">W co wierzymy?</h1>
+      <%- wco %>
+    </div>
+    <div id="jacy_jestesmy_mobile" class="mt-2 mt-sm-0 scroll-higher-1">
+      <h1 class="text-center display-1 bold">Jacy jesteśmy?</h1>
+      <%- jacy_sm %>
+    </div>
+    <div id="czarne_tlo" class="sh">
+      <div class="text-center invisible" style="user-select: none;">        
+        <h1 class="text-center display-1 bold mt-4">Nasza historia</h1>
+        <h4 class="text-center display-6">Aby się lepiej z nami poznać<br class="d-none d-md-inline d-lg-none"> warto znać naszą historię!<br>Zachęcamy do przeczytania.</h4>
+        <a href="/o_nas/historia" type="button" class="btn btn-rounded mb-5 mt-5"><span class="fs-6 m-2 btn-r-text"><span class="lead">Przejdź do naszej historii</span></span></a>
+      </div>
+    </div>
+    <div id="historia_mobile" class="position-relative scroll-higher-1">
+      <div class="text-center text-light">
+        <h1 class="text-center display-1 bold mt-4">Nasza historia</h1>
+        <h4 class="text-center display-6">Aby się lepiej z nami poznać<br class="d-none d-md-inline d-lg-none"> warto znać naszą historię!<br>Zachęcamy do przeczytania.</h4>
+        <a href="/o_nas/historia" type="button" class="btn btn-rounded mb-5 mt-5"><span class="fs-6 m-2 btn-r-text"><span class="lead">Przejdź do naszej historii</span></span></a>
+      </div>
+    </div>
+    <div id="liderzy_mobile" class=" scroll-higher-1">
+      <h1 class="text-center display-1 bold py-4">Nasi liderzy</h1>
+      <%- lid %>
+    </div>
+  </div>
+</div>
+
+<!-- md+ -->
+<div class="mb-3 d-none d-md-block">
+  <%= gora() %>
+    <div class="row nomargin pt-4 ms-3">
+        <div class="col-lg-2 col-md-3 ms-0 ms-md-2 pe-2" style="z-index: 50;">
+          <nav id="navbar-example3" class="h-100 flex-column align-items-stretch">
+            <nav class="nav nav-pills flex-column scrollspy card border-0 bg-white">
+              <div class="p-3">
+                <a id="kim" class="nav-link" href="#kim_jestesmy">Kim jesteśmy?</a>
+                <a class="nav-link" href="#w_co_wierzymy" id="w_co">W co wierzymy?</a>
+                <a class="nav-link" href="#jacy_jestesmy">Jacy jesteśmy?</a>
+                <a class="nav-link" href="#historia">Nasza historia</a>
+                <a class="nav-link" href="#liderzy">Nasi liderzy</a>
+              </div>
+            </nav>
+          </nav>
+        </div>
+        <div class="col-lg-9 col-md-8">
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example3" class="scrollspy-example-2" tabindex="0">
+            <div id="kim_jestesmy" class="scroll-higher-2">
+              <div class="row nomargin mb-4">
+                <div style="z-index: 3;">
+                  <h1 class="text-center display-1 bold">Kim jesteśmy?</h1>
+                  <%- kim %>
+                  </div>
+              </div>
+            </div>
+            <div id="w_co_wierzymy" class="scroll-higher-2">
+              <div class="yellow-bg mb-5 pt-2">
+                  <h1 class="text-center display-1 bold mt-2">W co wierzymy?</h1>
+                    
+                    <%- wco %>
+              </div>
+            </div>
+            
+
+            <div id="jacy_jestesmy" class="scroll-higher-2">
+              <div class="row nomargin mb-4">
+                  <h1 class="text-center display-1 bold mt-1">Jacy jesteśmy?</h1>
+    
+                    <%- jacy %>
+              </div>
+            </div>
+            <div id="historia" class="scroll-higher-2 text-light position-relative">
+              <div class="row nomargin mb-4 other-bg">
+                <div class="text-center">
+                  <h1 class="text-center display-1 bold mt-4">Nasza historia</h1>
+                  <h4 class="text-center display-6">Aby się lepiej z nami poznać<br class="d-none d-md-inline d-lg-none"> warto znać naszą historię!<br>Zachęcamy do przeczytania.</h4>
+                  <a href="/o_nas/historia" type="button" class="btn btn-rounded mb-5 mt-5"><span class="fs-6 m-2 btn-r-text"><span class="lead">Przejdź do naszej historii</span></span></a>
+                </div>
+              </div>
+            </div>
+            <div id="liderzy" class="me-4 scroll-higher-2">
+              
+              <h1 class="text-center display-1 bold mt-4 mb-4">Nasi liderzy</h1>
+              <div class="me-3">
+                <%- lid %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+// Get the navigation link and sub element
+const targetElement = document.querySelector("#w_co");
+
+var observer = new MutationObserver(function(mutationsList) {
+  mutationsList.forEach(function(mutation) {
+    if (mutation.type === "attributes" && mutation.attributeName === "class" && mutation.target === targetElement) {
+      if (targetElement.classList.contains("active")) {
+        // The element with ID 'w_coo' gained the class 'active'
+        console.log("Element with ID 'w_co' gained the class 'active'");
+        // Your code to react to the class change goes here
+      } else {
+        // The element with ID 'w_coo' lost the class 'active'
+        console.log("Element with ID 'w_co' lost the class 'active'");
+        // Your code to react to the class change goes here
+      }
+    }
+  });
+});
+
+// Start observing the target element for attribute changes
+observer.observe(targetElement, { attributes: true });
+
+
+
+</script>

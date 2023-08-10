@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate')%>
+<div class="ciemnykolor2">
+    <div class="animate from-up delay-0 category-info pb-0 mb-0" style="width: 100%;user-select: none;">
+        <div class="image">
+            <h1 class="fajny-shadow">Spotkania</h1>
+            <img src="/photos/headery/inne.jpg" class="top-strony"/>
+        </div>
+    </div>
+    <div class="ciemnykolor2">
+        <div class="animate from-up delay-ms-10 row row-karta borderradius-0 row-cols-1 row-cols-sm-1 row-cols-md-2">
+            <div id="naboBtn" class="col p-0 m-0 nabo_karta borderradius-0 kafelkanabo">
+                <h4 class="h4_wiecej text-center text-light">Nabożeństwo</h4>
+                <h6 class="h6_wiecej text-center text-light">Każda niedziela o 11:00</h6>
+            </div>
+            
+            <div id="kaloBtn" class="col p-0 m-0 kalo_karta bg-light borderradius-0 kafelkakalo fajny-shadow">
+                <h4 class="h4_wiecej text-center text-light">Kaloryfer</h4>
+                <h6 class="h6_wiecej text-center text-light">Każdy piątek roku szkolnego o 18:00</h6>
+            </div>
+        </div>
+        <div class="animate from-up delay-ms-20 row row-karta borderradius-0 row-cols-1 row-cols-sm-1 row-cols-md-2">
+            <div id="coffeeBtn" class="col p-0 m-0 kawa_karta text-light borderradius-0 kafelkakawa fajny-shadow">
+                <h4 class="h4_wiecej text-center text-light">Coffee House</h4>
+                <h6 class="h6_wiecej text-center text-light">Każdy wtorek o 18:00</h6>
+            </div>
+            <div id="sniadanieBtn" class="col p-0 m-0 szdn_karta bg-light borderradius-0 kafelkaszdn fajny-shadow">
+                <h4 class="h4_wiecej text-center text-light">Śniadanie z Dobrą Nowiną</h4>
+                <h6 class="h6_wiecej text-center text-light">Każda środa o 9:00</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById("naboBtn").addEventListener("click", function() {
+        location.href = "/nabozenstwa";
+    });
+    document.getElementById("kaloBtn").addEventListener("click", function() {
+        location.href = "/kaloryfer";
+    });
+    document.getElementById("coffeeBtn").addEventListener("click", function() {
+        location.href = "/coffeehousegorzow";
+    });
+    document.getElementById("sniadanieBtn").addEventListener("click", function() {
+        location.href = "/sniadaniazdobranowina";
+    });
+</script>

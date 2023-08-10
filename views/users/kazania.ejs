@@ -1,0 +1,11 @@
+<% layout('layouts/admin')%>
+
+<ul class="list-group list-group-flush">
+    <% for (let kazanie of kazania.reverse()) {%>
+    <li class="list-group-item">
+        <!-- <a href="/admin/kazania/<%= kazanie._id %> "><%= kazanie.tytul %></a><br> -->
+        <p class="p-0 m-0"><%= kazanie.tytul %> - <%= kazanie.mowca %></p><br>
+        <a class="link-secondary" href="/admin/kazania/<%= kazanie._id %>/edit">(edytuj)</a>
+        <a class="link-danger" href="/admin/kazania/<%= kazanie._id %>/edit">(usuń)</a></li>
+    <% } %>
+</ul>

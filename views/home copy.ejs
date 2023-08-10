@@ -1,0 +1,283 @@
+<% layout('layouts/boilerplate') %> 
+
+<head>
+    <style>
+        main, body{
+            background-color: #7ba7b9;
+        }
+    </style>
+  <link rel="stylesheet" href="/styles/home.css"/>
+  <link rel="stylesheet" href="/styles/slideshow.css"/>
+</head> 
+<div class="spinner">
+    <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<div class="uk-position-relative uk-visible-toggle uk-light d-block" tabindex="-1" 
+uk-slideshow="autoplay: true; animation: push; autoplay-interval: 5000; pause-on-hover: false; max-height: 670">
+  <ul class="uk-slideshow-items">
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k3.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          <div class="uk-position-center uk-position-medium uk-text-center">
+              <div uk-slideshow-parallax="scale: 1,1,0.8">
+                  <h2 uk-slideshow-parallax="x: 200,0,0" class="display-5">Hej! Zapraszamy cię do nas!</h2>
+                  <p uk-slideshow-parallax="x: 400,0,0;" class="fs-5">Nasze drzwi są otwarte dla każdego!</p>
+              </div>
+          </div>
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k1.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          <div class="uk-position-center uk-position-medium uk-text-center">
+              <div uk-slideshow-parallax="scale: 1,1,0.8">
+                  <h2 uk-slideshow-parallax="x: 200,0,0" class="display-5">Poznaj Boga od nowa!</h2>
+                  <p uk-slideshow-parallax="x: 400,0,0;" class="fs-5">Co jeśli Jezus jest inny niż ten, którego widzimy w popkulturze?</p>
+              </div>
+          </div>
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k2.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          <div class="uk-position-center uk-position-medium uk-text-center">
+              <div uk-slideshow-parallax="scale: 1,1,0.8">
+                  <h2 uk-slideshow-parallax="x: 200,0,0" class="display-5">Czekają na ciebie wspaniali ludzie i muzyka!</h2>
+                  <p uk-slideshow-parallax="x: 400,0,0;" class="fs-5">I bardzo, bardzo dobra kawa :)</p>
+              </div>
+          </div>
+      </li>
+  </ul>
+
+  <a class="uk-slidenav uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover uk-light" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+  <a class="uk-slidenav uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover uk-light" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+<div  id="nabozenstwa" class="row nomargin homeheight nabo">
+    <article class="order-1 col-12 col-md-6 justify-content-center nabotlohome">
+        <div class="row nomargin mt-5 pt-1 mb-5 mb-lg-0">
+            <div class="col"></div>
+            <div class="col-7">
+                <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1">Nabożeństwa</h1>
+                <p class="lead text-center">Serdecznie zapraszamy na nasze nabożeństwa<br>
+                    <b>w każdą niedzielę o 11:00!</b><br><br>
+                    <a class="link-dark link-hovereffect" href="/kontakt">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                            Gdzie nas znajdziesz?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                    </a>
+                </p>
+            </div>
+            <div class="col"></div>
+        </div>
+    </article>
+    <article alt="" class="hm1 homeobraz order-2 col-12 col-md-6 py-5 py-md-0">
+        <p class="invisible py-5 py-md-0">padding</p>
+    </article>
+</div>
+<div class="row nomargin homeheight nabo">
+    <article alt="" class="hm2 homeobraz order-2 order-md-1 col-12 col-md-6 py-5 py-md-0">
+        <p class="invisible py-5 py-md-0">padding</p>
+    </article>
+    <article class="order-md-2 order-1 col-12 col-md-6 kalotlohome justify-content-center">
+        <div class="row nomargin mt-5 pt-1 mb-5 mb-lg-0">
+            <div class="col"></div>
+            <div class="col-7">
+                <h1 id="kaloryfer" class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1">Kaloryfer</h1>
+                <p class="lead text-center">Kaloryfer to chrześcijańskie spotkania<br> młodzieżowe organizowane<br>
+                    <b>w każdy piątek roku szkolnego o 18:00!</b><br><br>
+                    <a href="/kaloryfer" class="link-dark link-hovereffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                        Dowiedz się więcej!
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                    </a>
+                </p>
+            </div>
+            <div class="col"></div>
+        </div>
+    </article>
+</div>
+<div id="naucz" class="row nomargin homeheight nabo text-light">
+    <article class="col-12 col-md-6 justify-content-center pt-md-0 mt-md-0 pt-5 mt-5">
+        <div class="row nomargin mt-5 pt-1 mb-5 mb-lg-0">
+            <div class="col"></div>
+            <div class="col-7">
+                <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1">Nauczania</h1>
+                <p class="lead text-center">Zobacz kto naucza w naszej wspólnocie i posłuchaj!<br><br>
+                    <a href="/nauczanie" class="link-light link-hovereffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                        Odkryj!
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                    </a>
+                </p>
+            </div>
+            <div class="col"></div>
+        </div>
+    </article>
+</div>
+<div id="uwie" class="row nomargin homeheight nabo text-light">
+    <div class="col-6"></div>
+    <article class="col-12 col-md-6 justify-content-center">
+        <div class="row nomargin mt-5 pt-1 mb-5 mb-lg-0">
+            <div class="col"></div>
+            <div class="col-7">
+                <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-5 pt-1">Uwielbienie</h1>
+                <p class="lead text-center fajny-shadow">
+                    Zobacz przykłady naszego uwielbienia przez sztukę i kto je tworzy!<br><br>
+                    <a href="/uwielbienie" class="link-light link-hovereffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                        Odkryj!
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                    </a>
+                </p>
+            </div>
+            <div class="col"></div>
+        </div>
+    </article>
+<!-- aktualnosci o nas kontakt -->
+</div>
+<div class="row nomargin homeheight nabo text-light fajny-shadow mb-4 mb-md-0 row-cols-1 row-cols-md-2 row-cols-lg-2">
+        <article class="invisible col text-center hm4 cover delay-ms-0">
+            <div class="pt-5 row nomargin">
+                <div class="col"></div>
+                <div class="col-6">
+                    <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1">Aktualności</h1>
+                    <p class="lead text-center">Zobacz co się u nas dzieje!<br><br>
+                        <a href="/aktualnosci" class="link-light link-hovereffect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                Odkryj!
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                        </a>
+                    </p>
+                </div>
+                <div class="col"></div>
+            </div>
+        </article>
+        <article class="invisible col text-center hm5 cover delay-ms-10">
+            <div class="pt-5 row nomargin">
+                <div class="col"></div>
+                <div class="col-6">
+                    <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1">O nas</h1>
+                    <p class="lead text-center">Poznaj nasz kościół bliżej!<br><br>
+                        <a href="/onas" class="link-light link-hovereffect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                Odkryj!
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                        </a>
+                    </p>
+                </div>
+                <div class="col"></div>
+            </div>
+        </article>
+</div>
+<div class="footerr">
+    <div class="row nomargin homeheight nabo text-light fajny-shadow mb-5">
+            
+            <article class="invisible col-md-4 col-12 text-center hm8 cover">
+                <div class="pt-5 row nomargin">
+                    <div class="col"></div>
+                    <div class="col-6">
+                        <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1">Więcej</h1>
+                        <p class="lead text-center">Zobacz co współtworzymy oraz wspieramy!<br><br>
+                            <a href="/onas" class="link-light link-hovereffect text-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                    Odkryj!
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </article>
+            <article class="invisible col-md-4 col-12 text-center hm7 cover">
+                <div class="pt-5 row nomargin">
+                    <div class="col"></div>
+                    <div class="col-6">
+                        <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1 pb-0 mb-0">Coffee House</h1>
+                        <h5 class="text-center pb-2">Oddział w Gorzowie Wlkp.</h5>
+                        <p class="lead text-center">Coffee House to spotkania organizowane przez misję
+                            <span class="text-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                    <a href="https://teenchallenge.pl/" class="link-light link-hovereffect">Teen Challenge</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                            </span><br><br>
+                            <a href="/coffeehousegorzow" class="link-light link-hovereffect text-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                    Coffee House
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                            </a><br>
+                            <a href="/sniadaniazdobranowina" class="link-light link-hovereffect text-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                    <span class="fs-6">Śniadania z dobrą nowiną</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </article>
+            <article class="col-md-4 col-12 text-center hm6 cover">
+                <div class="pt-5 row nomargin">
+                    <div class="col"></div>
+                    <div class="col-6">
+                        <h1 class="text-center mt-lg-5 pt-lg-5 mt-md-3 pt-md-3 mt-sm-1 pt-sm-1">Kontakt</h1>
+                        <p class="lead text-center">Zobacz co współtworzymy oraz wspieramy!<br><br>
+                            <a href="/onas" class="link-light link-hovereffect text-nowrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                    Odkryj!
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </article>
+    </div>
+
+
+
+
+    <div class="d-block d-md-none d-lg-none pb-5 pb-sm-0 pb-md-4 footerr">
+        <p class="invisible d-block d-md-none mb-5">margin</p>
+        <p class="invisible pb-0 pb-sm-0 pb-md-4 pb-lg-0 mt-4 mt-md-0">margin</p>
+        <p class="invisible pb-0 pb-sm-0 pb-md-1 mb-lg-0 mt-4 mt-md-0">margin</p>
+        <p class="invisible pb-4 pb-sm-0 pb-md-1 mb-lg-0 mt-4 mt-md-0">margin</p>
+    </div>
+</div>
+
+<script>
+
+    //animate when in view
+const inViewport = (elem) => {
+    let allElements = document.getElementsByTagName(elem);
+    let windowHeight = window.innerHeight;
+    const elems = () => {
+        for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
+            let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
+            let top = viewportOffset.top;  //  get the offset top
+            if(top < windowHeight){  //  if the top offset is less than the window height
+                allElements[i].classList.remove('invisible');
+                allElements[i].classList.add('animate', 'from-up');  //  add the class
+            } 
+            else{
+                allElements[i].classList.remove('animate', 'from-up');  //  remove the class
+                allElements[i].classList.add('invisible');
+            }
+        }
+    }
+    elems();
+    window.addEventListener('scroll', elems);
+}
+
+inViewport('article');//  run the function on all article elements
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.12/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.12/dist/js/uikit-icons.min.js"></script>

@@ -1,0 +1,75 @@
+<head>
+    <link rel="stylesheet" href="/styles/audio.css">
+    <style>
+        .fs-7{
+            font-size: smaller;
+        }
+        .btn-audio{
+            height: 4em;
+            width: 4em;
+            
+        }
+
+        .move-icon{
+            position: relative;
+            bottom: 4px;
+        }
+
+        .move-icon-2{
+            left:2px;
+            top:1px;
+        }
+        /* .w-audio{
+            width: 25em;
+        } */
+        q {
+            quotes: none;
+        }
+        .search{
+            top: 1em;
+            z-index: 998;
+        }
+    </style>
+</head>
+
+ 
+
+<div class="animate from-up delay-0 category-info mb-0" style="width: 100%;user-select: none;">
+    <div class="image">
+        <div class="search position-absolute end-0 me-3">
+            <a class="btn btn-light border border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" name="Wyszukaj kazania."><i class="bi bi-search"></i></a>
+        </div>
+        
+        <h1 class="naglowek display-4">NAUCZANIE</h1>
+        <img src="/photos/headery/nau.jpg" class="top-strony"/>
+    </div>
+</div>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Wyszukaj</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+            <iframe
+            src="/nauczanie/wyszukaj"
+            width="100%"
+            height="500px"
+            style="border: none;"
+            class="pb-4"
+          >
+          </iframe>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

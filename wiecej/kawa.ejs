@@ -1,0 +1,144 @@
+<% layout('layouts/boilerplate')%>
+<head>
+    <style>
+        .obraz1{
+            background-image: url(/photos/spotkania/ch.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 33.5em;
+            padding: 1em;
+        }
+        .obraz2{
+            background-image: url(/photos/spotkania/ch.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 20.5em;
+            padding: 1em;
+        }
+
+        .brazowetlo {
+            /* background-color: #caa064; */
+            background-color: #714528;
+        }
+        .ciemnobrazowetlo{
+            background-color: #2a1c13;
+        }
+
+        .main{
+            /* height: 10%; */
+            padding-top: 15%;
+            padding-bottom: 15%;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 4em;
+        }
+         .obraz1{
+            background-image: url(/photos/szdn_obraz.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 33.5em;
+            padding: 1em;
+        }
+        .obraz2{
+            background-image: url(/photos/szdn_obraz.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 20.5em;
+            padding: 1em;
+        }
+
+        .zielonetlo {
+            /* background-color: #caa064; */
+            background-color: #a3d385 ;
+        }
+        .ciemnozielonetlo{
+            background-color: #447128;
+        }
+        .btn-coffee {
+            --bs-btn-color: rgb(228, 228, 228) !important;
+            --bs-btn-bg: #4f3027 !important;
+            --bs-btn-border-color: #4f3027;
+            --bs-btn-hover-color: rgb(255, 255, 255) !important;
+            --bs-btn-hover-bg: #422923;
+            --bs-btn-hover-border-color: #2f231f !important;
+            --bs-btn-focus-shadow-rgb: 60,153,110;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #422923;
+            --bs-btn-active-border-color: #50332d;
+            --bs-btn-active-shadow: inset 0 3px 5px
+                rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #fff;
+            --bs-btn-disabled-bg: #4f3027;
+            --bs-btn-disabled-border-color: #4f3027;
+        }
+        .noanimate{
+            animation: none;
+        }
+    </style>
+</head>
+<div class="brazowetlo">
+    <div class="category-info pb-0 mb-0" style="width: 100%;user-select: none;">
+        <div class="image">
+            <h1  class="naglowek display-4">Coffee House</h1>
+            <img src="/photos/spotkania/kawa_kontakt.jpg" class="noanimate top-strony"/>
+        </div>
+    </div>
+
+    <section class="row nomargin">
+        <div class="animate glow delay-ms-5 d-none d-md-block col-md-6 obraz1 bg-light noanimate"></div>
+        <div class="col-12 col-md-6 brazowetlo">
+            <p class="mt-1 main text-light text-center">
+                <span class="animate from-left delay-ms-10">KAWA</span><br>
+                <span class="animate from-left delay-ms-20">ROZMOWA</span><br>
+                <span class="animate from-left delay-ms-30">NADZIEJA</span><br></p>
+        </div>
+        <div class="animate glow delay-ms-5 d-block d-md-none col-12 obraz2 bg-light noanimate"></div>
+    </section>
+    <div class="row nomargin ciemnobrazowetlo animate from-up delay-ms-15">
+            <div class="col-12 col-md-4 text-center text-light mt-5 pt-5 mb-5 pb-5">
+                <h2>Kiedy się spotykamy?</h2>
+                <p>
+                    <span class="fs-5">Wieczorne spotkanie Coffee House</span><br>
+                    Wtorek o <b>18:00</b><br>
+                    <br>
+                    <span class="fs-5">
+                        Śniadania z Dobrą Nowiną
+                    </span><br>
+                    Środa o <b>9:00</b><br>
+                </p>
+            </div>
+            
+            <div class="col-12 col-md-4 text-center text-light mt-5 pt-5 mb-4 pb-5">
+                <p>
+                    <h5 class="fajny-shadow pt-4 mt-4">Pomoc w uzależnieniach</h5>
+                    <h5 class="fajny-shadow ">Droga do wolności</h5>
+                </p>
+            </div>
+            <div class="col-12 col-md-4 text-center text-light mt-5 pt-5 mb-4 pb-5">
+                <h2 class="pt-3">Gdzie nas znajdziesz?</h2>
+                <p>
+                    Gorzów Wielkopolski<br> 
+                    ul. Słoneczna 6 (na piętrze)<br>
+                </p>
+            </div>
+    </div>
+    <div class="row nomargin brazowetlo text-center text-light pt-4 pb-4 animate from-up delay-ms-17">
+        <div class="col-12 mt-4 mb-4">
+            <h2 class="">Współorganizowane przez:</h2>
+            <p>
+                <a href="/" class="link-light link-hovereffect">Górna izba</a><br>
+                <a onclick="tc()" class="link-light link-hovereffect">Teen Challenge</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function tc(){
+        window.open("https://teenchallenge.pl/")
+    }
+
+</script>

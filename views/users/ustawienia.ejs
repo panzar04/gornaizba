@@ -1,0 +1,83 @@
+<% layout('layouts/admin')%>
+<!-- <div class="row nomargin pt-5 pb-5">
+    <div class="col"></div>
+    <div class="col-6">
+        <div class="card">
+            <h5 class="card-header">Ustawienia</h5>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    Edytuj konto
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Usuń konto
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+    
+   Modal
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Czy na pewno chcesz to zrobić?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Po usunięciu nie będzie można przywrócić konta!
+        </div>
+        <div class="modal-footer">
+            <form action="/register?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Usuń</button>
+            </form>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel1">Wprowadź dane</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/register?_method=PUT" method="POST">
+                <div class="mb-3">
+                    <label class="form-label" for="username">Nazwa<strong class="text-danger">*</strong></label>
+                    <input class="form-control" type="text" id="username" name="username" required value="<%= //users.username %>">
+                    <div class="valid-feedback">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password">Hasło<strong class="text-danger">*</strong></label>
+                    <input class="form-control" type="password" id="password" name="password" required>
+                    <div class="valid-feedback">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <button class="btn btn-danger" data-bs-dismiss="modal">Edytuj</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            
+                
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+          
+        </div>
+      </div>
+    </div>
+  </div> -->

@@ -1,0 +1,91 @@
+main, body, .kalo, #foot, #body{
+    background: #70534d;
+}
+
+.bld{
+    font-size: 1rem;
+}
+
+.napis{
+    font-size: 2.5em;
+}
+.black{
+    color: black;
+}
+.kalo > .container{
+    width: 100%;
+}
+.kalo > .row{
+    border:0px;
+    margin: 0;
+    max-width:100%; 
+}
+.bezlewej{
+    padding-left: 0px;
+}
+
+.lead:first-of-type{
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.mac-width {
+    max-width: 50%;
+}
+
+.container .kalo {
+    width: 100%;
+}
+
+.ostatnie {
+    height: 30em;
+}
+
+#kalofbb {
+    color: rgb(67, 94, 192);
+    transition: 0.2s;
+}
+
+#kalofbb:hover {
+    color: rgb(119, 132, 179);
+    cursor: pointer;
+}
+
+#igkalo {
+    color: #d6249f;
+    transition: 0.2s;
+  }
+  #igkalo:hover {
+    cursor: pointer;
+    color: #cc89b7;
+  }
+
+
+
+.fa-envelope {
+    margin-left: -0.25em;
+}
+
+.margkalo {
+    margin-top: 10em;
+}
+
+#mailkalo {
+    color: rgb(165, 165, 165);
+    transition: 0.2s;
+    margin-left: 0;
+    
+  background: transparent;
+  border: none;
+  cursor: pointer; 
+  }
+  #mailkalo:hover {
+    color:rgb(205, 205, 205) ;
+  }
+
+  .bg-naszeLogo {
+    background-color:#70534d;
+}
+.bd-footer{
+    background-color:rgb(162, 144, 140);
+}

@@ -1,0 +1,496 @@
+<% layout('layouts/boilerplate') %> 
+
+<head>
+    <style>
+        main, body, .bg-gorna{
+            /* background-color: #7ba7b9; */
+            /* background-color:#4fa2a6; */
+            background-color: #1d8880;
+        }
+    </style>
+  <link rel="stylesheet" href="/styles/home.css"/>
+  <link rel="stylesheet" href="/styles/slideshow.css"/>
+</head> 
+
+<% 
+const string0 = "Gdzie nas znajdziesz?";
+const string1 = "Dowiedz się więcej!";
+const string2 = "Odkryj!";
+const string3 = "Sprawdź!";
+
+const home1 = "1";
+const home2 = "2";
+const home3 = "3";
+const home4 = "6";
+const home5 = "5";
+const home6 = "4";
+const home7 = "7"; //zakryta
+const home8 = "8";
+const home9 = "9";
+const home10 = "10";
+%> 
+
+
+    
+<div id="spinner" class="bg-gorna spinner-bg ">
+    <div class="spinner">
+        <div class="spinner-border text-dark" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<div id="slider" class="uk-visible-toggle uk-light" tabindex="-1" 
+uk-slideshow="autoplay: true; animation: push; autoplay-interval: 4000; pause-on-hover: false; max-height: 750; min-height: 300">
+  <ul class="uk-slideshow-items">
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home1 %>.jpg" alt="" uk-cover class="">
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          <div class="uk-position-center uk-position-medium uk-text-center">
+              <div uk-slideshow-parallax="scale: 1,1,0.8">
+                  <h2 uk-slideshow-parallax="x: 200,0,0" class="display-5">
+                    Witamy na naszej stronie!
+                </h2>
+                  <p uk-slideshow-parallax="x: 400,0,0;" class="fs-5">
+                    Odkryj z nami Boga od zupełnie innej strony!
+                </p>
+              </div>
+          </div>
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home2 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          <div class="uk-position-center uk-position-medium uk-text-center">
+              <div uk-slideshow-parallax="scale: 1,1,0.8">
+                  <h2 uk-slideshow-parallax="x: 200,0,0" class="display-5">
+                    Poznaj wspaniałych ludzi
+                  </h2>
+                  <p uk-slideshow-parallax="x: 400,0,0;" class="fs-5">
+                    i wypij z nimi kawę!
+                  </p>
+              </div>
+          </div>
+      </li>
+      <!-- <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home3 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          <div class="uk-position-center uk-position-medium uk-text-center">
+            <div uk-slideshow-parallax="scale: 1,1,0.8">
+                <h2 uk-slideshow-parallax="x: 200,0,0" class="display-5">
+                  
+                </h2>
+                <p uk-slideshow-parallax="x: 400,0,0;" class="fs-5">
+                  
+                </p>
+            </div>
+        </div>
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home4 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home5 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home6 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= //home7 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home8 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home9 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          
+      </li>
+      <li>
+          <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+              <img src="/photos/home/k<%= home10 %>.jpg" alt="" uk-cover>
+          </div>
+          <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+          
+      </li> -->
+  </ul>
+
+  <a class="uk-slidenav uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover uk-light d-none d-sm-none d-md-flex" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+  <a class="uk-slidenav uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover uk-light d-none d-sm-none d-md-flex" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+<div id="home-container" hidden>
+    <div class="row nomargin nabo">
+        <div id="nabozenstwa" class="row nomargin text-center d-flex ciemnyturkusowy scroll-higher-2">
+            <article class="col-md-6 col-12 homeobraz homeheight">
+                <h1 class="text-light mt-6">Nasze spotkania</h1>
+                <p class="text-light lead mx-sm-1 px-4">Serdecznie zapraszamy na nasze spotkania<br class="d-none d-md-inline">
+                    w każdą niedzielę o 11:00!
+                </p>
+                <p>
+                    <a id="link0" class="link-light link-hovereffect" href="/kontakt#Mapa" 
+                    
+                    onmouseover="
+                        let link = document.getElementById(`link0`);
+                        link.innerHTML = 
+                        `<i class='caret-r bi bi-caret-right-fill'></i> <%= string0 %> <i class='caret-l bi bi-caret-left-fill'></i>`;" 
+                    
+                    
+                    onmouseout="
+                        document.getElementById(`link0`).innerHTML = 
+                        `<i class='caret-r bi bi-caret-right'></i> <%= string0 %> <i class='caret-l bi bi-caret-left'></i>`;">
+
+
+                    <!-- default = -->
+                        <i class="caret-r bi bi-caret-right"></i>
+                            <%= string0 %> 
+                        <i class="caret-l bi bi-caret-left"></i>
+
+
+                    </a>
+                </p>
+            </article>
+            <div class="d-none d-md-flex col-md-6 col-12 homeobraz homeheight hmnabo"></div>
+        </div>
+    </div>
+
+    <div class="row nomargin nabo">
+        <div class="row nomargin text-center d-flex">
+            <div class="d-none d-md-flex col-md-6 col-12 homeobraz homeheight hmkalo"></div>
+            <div class="col-md-6 col-12 homeobraz homeheight kalotlohome">
+                <article>    
+                    <h1 class="text-light mt-6">Kaloryfer</h1>
+                    <p class="text-light lead px-4">Kaloryfer to chrześcijańskie spotkania<br class="d-none d-md-inline"> młodzieżowe organizowane<br>
+                        w każdy piątek podczas roku szkolnego o 18:00!
+                    </p>
+                    <p>
+                        <a id="link1" class="link-light link-hovereffect" href="/kaloryfer" 
+                        
+                        onmouseover="
+                            let link = document.getElementById(`link1`);
+                            link.innerHTML = 
+                            `<i class='caret-r bi bi-caret-right-fill'></i> <%= string1 %> <i class='caret-l bi bi-caret-left-fill'></i>`;" 
+                        
+                        
+                        onmouseout="
+                            document.getElementById(`link1`).innerHTML = 
+                            `<i class='caret-r bi bi-caret-right'></i> <%= string1 %> <i class='caret-l bi bi-caret-left'></i>`;">
+
+
+                        <!-- default = -->
+                            <i class="caret-r bi bi-caret-right"></i>
+                                <%= string1 %> 
+                            <i class="caret-l bi bi-caret-left"></i>
+
+
+                        </a>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center nomargin bg-light hmodkryj">
+        <div id="break" class="row nomargin rowcols-3">
+            <div class="col"></div>
+            <div class="col">
+                <article class="lead">
+                    <% const header = 'Odkryj!' %>
+                    <h2 class="text-dark mt-5 d-none d-md-block fs-1"><%= header %></h2>
+                    <h1 class="text-dark mt-3 mb-3 d-md-none d-block"><%= header %></h1>
+                    <div class="d-md-flex d-inline mt-5 mb-5 text-center h">
+                        <div class="w col card border-secondary">
+                            <div class="card-body px-1">
+                                <!-- Kazanie -->
+                                <h3 class="pb-5 pt-3"><a href="/nauczanie" class="link-hovereffect link-dark">Nauczanie</a></h3>
+                                <div class="">
+                                    <div class="mb-4">
+                                        <% function tresc (string, limit) {return string.substring(0, limit);}; %>  
+                                        <% function tekst(str, num, num2){ %> 
+                                            <% if (str.length > num) { %>
+                                                <span style="font-size: smaller;"><%= tresc(str, num)%>...</span>
+                                                <% } else if (str.length > num2) { %>
+                                                <span style="font-size: smaller;"><%= str %></span>
+                                                <% } else if (str.length <= num2) { %>
+                                                    <%= str %>
+                                        <% }} %> 
+                                        <% function tekstq(str, num, num2){ %> 
+                                            <% if (str.length > num) { %>
+                                                <span style="font-size: smaller;">"<%= tresc(str, num)%>..."</span>
+                                                <% } else if (str.length > num2) { %>
+                                                <span style="font-size: smaller;">"<%= str %>"</span>
+                                                <% } else if (str.length <= num2) { %>
+                                                    "<%= str %>"
+                                        <% }} %> 
+                                        <h5><%= kazanie.mowca %></h5>
+                                        <p class="lead">
+                                        <%= tekstq(kazanie.tytul, 60, 40) %>
+                                            <!-- 40 znakow to wystarczajaco -->
+                                        </p>
+                                    </div>
+                                    <div class="px-3">
+                                        <div class="row px-4">
+                                            <a id="play-btn" class="mx-3 col btn btn-outline-success" href="/nauczanie/wyszukaj/<%= kazanie._id %>">
+                                                <i class="bi bi-play-fill fs-2"></i>
+                                            </a>
+                                            <a class="mx-3 col btn btn-outline-secondary" href="/dodaj/kazania/<%= kazanie.audio %>.<%= kazanie.typ %>" download target="_blank">
+                                                <i class="bi bi-download fs-2 move-icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w col card border-secondary mt-2 mt-md-0 mx-0 mx-lg-3 mx-md-2">
+                            <div class="card-body">
+                                <!-- Werset -->
+                                
+                                <h3 class="card-title pb-3">Werset<br>dnia</h3>
+                                <iframe src="/votd" width="100%" height="100%" style="border: none; height:30vh" class="pb-4 px-1">
+                                </iframe>
+                            </div>
+                            <p> 
+                                <small class="text-secondary">
+                                    Zasilone przez <a target=”_blank” rel="nofollow" href="https://www.biblegateway.com/">BibleGateway.com</a>
+                                </small>    
+                            </p> 
+                        </div>
+                        <div class="w col card border-secondary mt-2 mb-5 my-md-0">
+                            <div class="card-body px-2">
+                                <!-- Artykuł -->
+                                <% function photo(str,alt){ %> 
+                                    <% if (!str) { %>
+                                        <% return } else { %> 
+                                            <img src="/dodaj/artykuly-zdjecia/<%= str %>" class='card-img box-zdjecie mb-2' alt="<%= alt %> ">
+                                        <% }}%> 
+                                
+                                
+                                <% if(!artykul.zdjecie){ %>
+                                    <h3 class="pb-5 pt-3"><a href="/artykuly" class="link-hovereffect link-dark">Artykuły</a></h3>
+                                    <div class="">
+                                        <div class="mb-5">
+                                            <h5><%= artykul.autor %></h5>
+                                            <p class="lead">
+                                                <%= tekstq(artykul.tytul, 60, 40) %>
+                                            </p>
+                                        </div>
+                                        
+                                <% } else { %>
+                                    <h3 class="pb-2">Najnowszy<br>artykuł</h3>
+                                    <div class="">
+                                        <div class="mb-2">
+                                            <h5><%= artykul.autor %></h5>
+                                            <p class="lead mb-0 pb-0">
+                                                <%= tekstq(artykul.tytul, 50, 30) %>
+                                            </p>
+                    `                       <%= photo(artykul.zdjecie, artykul.alt) %>
+                                        </div>
+                                    </div>
+                                <% } %>
+                                    <a id="play-btn" class="mb-auto btn btn-outline-info" href="/artykuly/<%= artykul._id %>">
+                                        Otwórz
+                                    </a>
+                                </div>
+                        </div>
+                            
+                            
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="col"></div>
+        </div>
+    </div>
+    <!-- o nas i uwie -->
+    <div class="row nomargin nabo">
+        <div class="row nomargin text-center d-flex">
+            <article class="col-md-6 col-12 homeobraz homeheight hmonas">
+                
+                <h1 class="text-light mt-6">O nas</h1>
+                <p class="text-light lead">
+                    Dowiedz się więcej o tym kim jesteśmy!
+                </p>
+                <p>
+                    <a id="link5" class="link-light link-hovereffect" href="/o_nas" 
+                    
+                    onmouseover="
+                        let link = document.getElementById(`link5`);
+                        link.innerHTML = 
+                        `<i class='caret-r bi bi-caret-right-fill'></i> <%= string2 %> <i class='caret-l bi bi-caret-left-fill'></i>`;" 
+                    
+                    
+                    onmouseout="
+                        document.getElementById(`link5`).innerHTML = 
+                        `<i class='caret-r bi bi-caret-right'></i> <%= string2 %> <i class='caret-l bi bi-caret-left'></i>`;">
+
+
+                    <!-- default = -->
+                        <i class="caret-r bi bi-caret-right"></i>
+                            <%= string2 %> 
+                        <i class="caret-l bi bi-caret-left"></i>
+
+
+                    </a>
+                </p>
+            </article>
+            <article id="uwie" class="col-md-6 col-12 homeobraz homeheight">
+                <h1 class="text-light mt-6">Uwielbienie</h1>
+                <p class="text-light lead">
+                    Zobacz naszą perspektywę!
+                </p>
+                <p>
+                    <a id="link5" class="link-light link-hovereffect" href="/uwielbienie" 
+                    
+                    onmouseover="
+                        let link = document.getElementById(`link5`);
+                        link.innerHTML = 
+                        `<i class='caret-r bi bi-caret-right-fill'></i> <%= string2 %> <i class='caret-l bi bi-caret-left-fill'></i>`;" 
+                    
+                    
+                    onmouseout="
+                        document.getElementById(`link5`).innerHTML = 
+                        `<i class='caret-r bi bi-caret-right'></i> <%= string2 %> <i class='caret-l bi bi-caret-left'></i>`;">
+
+
+                    <!-- default = -->
+                        <i class="caret-r bi bi-caret-right"></i>
+                            <%= string2 %> 
+                        <i class="caret-l bi bi-caret-left"></i>
+
+
+                    </a>
+                </p>
+            </article>
+        </div>
+    </div>
+    <!-- kontakt i wiecej -->
+    <div class="row nomargin nabo">
+        <div class="row nomargin text-center d-flex">
+            <article class="col-md-6 col-12 homeobraz homeheight hmkontakt">
+                
+                <h1 class="text-light mt-6">Kontakt</h1>
+                <p class="text-light lead">
+                    Skontaktuj się z nami!
+                </p>
+                <p>
+                    <a id="link5" class="link-light link-hovereffect" href="/kontakt" 
+                    
+                    onmouseover="
+                        let link = document.getElementById(`link5`);
+                        link.innerHTML = 
+                        `<i class='caret-r bi bi-caret-right-fill'></i> <%= string2 %> <i class='caret-l bi bi-caret-left-fill'></i>`;" 
+                    
+                    
+                    onmouseout="
+                        document.getElementById(`link5`).innerHTML = 
+                        `<i class='caret-r bi bi-caret-right'></i> <%= string2 %> <i class='caret-l bi bi-caret-left'></i>`;">
+
+
+                    <!-- default = -->
+                        <i class="caret-r bi bi-caret-right"></i>
+                            <%= string2 %> 
+                        <i class="caret-l bi bi-caret-left"></i>
+
+
+                    </a>
+                </p>
+            </article>
+            <article class="col-md-6 col-12 homeobraz homeheight hmwiecej">
+                <h1 class="text-light mt-6">Więcej</h1>
+                <p class="text-light lead">
+                    Zobacz co współtworzymy oraz wspieramy!
+                </p>
+                <p>
+                    <a id="link5" class="link-light link-hovereffect" href="/wiecej" 
+                    
+                    onmouseover="
+                        let link = document.getElementById(`link5`);
+                        link.innerHTML = 
+                        `<i class='caret-r bi bi-caret-right-fill'></i> <%= string2 %> <i class='caret-l bi bi-caret-left-fill'></i>`;" 
+                    
+                    
+                    onmouseout="
+                        document.getElementById(`link5`).innerHTML = 
+                        `<i class='caret-r bi bi-caret-right'></i> <%= string2 %> <i class='caret-l bi bi-caret-left'></i>`;">
+
+
+                    <!-- default = -->
+                        <i class="caret-r bi bi-caret-right"></i>
+                            <%= string2 %> 
+                        <i class="caret-l bi bi-caret-left"></i>
+
+
+                    </a>
+                </p>
+            </article>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener("load", async () => {
+        //document.body.style.overflow = "hidden";
+        
+        document.getElementById("spinner").classList.add("animate-spinner")
+        
+        document.getElementById('home-container').removeAttribute('hidden');
+        await setTimeout(() => { 
+            document.getElementById("spinner").classList.add("d-none"); 
+            //document.body.style.overflow = "auto";
+        }, 750);
+    });
+
+
+        //animate when in view
+    const inViewport = (elem) => {
+        let allElements = document.getElementsByTagName(elem);
+        let windowHeight = window.innerHeight;
+        const elems = () => {
+            for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
+                let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
+                let top = viewportOffset.top;  //  get the offset top
+                if(top < windowHeight){  //  if the top offset is less than the window height
+                    allElements[i].classList.remove('invisible');
+                    allElements[i].classList.add('animate', 'from-up');  //  add the class
+                } 
+                // else{
+                //     allElements[i].classList.remove('animate', 'from-up');  //  remove the class
+                //     allElements[i].classList.add('invisible');
+                // }
+            }
+        }
+        elems();
+        window.addEventListener('scroll', elems);
+    }
+
+    inViewport('article');//  run the function on all article elements
+</script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.12/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.12/dist/js/uikit-icons.min.js"></script>

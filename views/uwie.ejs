@@ -1,0 +1,165 @@
+<% layout('layouts/boilerplate')%>
+<div class="animate from-up delay-0 category-info" style="width: 100%; user-select: none;">
+    <div class="image">
+        <h1 class="naglowek display-4">UWIELBIENIE</h1>
+        <img src="/photos/home/k4.jpg" class="top-strony uwie-pic"/>
+    </div>
+</div>
+<head>
+    <link rel="stylesheet" href="/styles/onas.css">
+    <style>
+        .display-1{
+            font-weight:700;
+        }
+        .list-group-item-action:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<%- include('./partials/uwie/p/modale') %> 
+
+<div class="row nomargin pt-4 ms-3">
+    <div class="col-lg-2 col-md-3 ms-0 ms-md-2 pe-2" style="z-index: 50;">
+      <nav id="navbar-example3" class="h-100 flex-column align-items-stretch d-none d-md-flex">
+        <nav class="nav nav-pills flex-column scrollspy card border-0 bg-white">
+          <div class="p-3">
+            <a id="kim" class="nav-link" href="#o_uwielbieniu">O uwielbieniu</a>
+            <a class="nav-link" href="#piesni">Pieśni</a>
+          </div>
+        </nav>
+      </nav>
+    </div>
+    <div class="col-lg-9 col-md-8">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" class="scrollspy-example-2" tabindex="0">
+        <div id="o_uwielbieniu" class="scroll-higher-2">
+          <div class="row nomargin mb-4">
+            <div class="col"></div>
+            <div class="col-lg-11 col-md-10" style="z-index: 3;">
+              <h1 class="text-center display-1 bold mt-0">O uwielbieniu</h1>
+                <div class="mx-5">
+                    <%- include('./partials/uwie/ouwie') %>
+                </div>
+              </div>
+              <div class="col"></div>
+          </div>
+        </div>
+        <div id="piesni" class="scroll-higher-2">
+          <div class="row nomargin mb-4">
+            <div class="col"></div>
+            <div class="col-lg-11 col-md-10 mb-2">
+              <h1 class="text-center display-1 bold mt-1 mb-1">Pieśni</h1>
+              <h2 class="mb-3 text-center lead fs-4">Zobacz teksty i akordy różnych piosenek!</h2>
+                <div class="mx-5">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-12">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <strong>W noc i w dzień - MU 24/7</strong>
+                                </div>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#one">
+                                    W noc i w dzień
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#two">
+                                    Jestem świątynią
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#three">
+                                    Pieśń Objawienia
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#four">
+                                    Dzisiaj tańczę przed Tobą
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#five">
+                                    Baranku Boży
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#six">
+                                    22122
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <strong>Obyś rozdarł niebiosa i zstąpił - MU 24/7</strong>
+                                </div>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#seven">
+                                    Stwórca Ziemi
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#eight">
+                                    Święty jest Pan
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#nine">
+                                    Wznoszę swe ręce
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#ten">
+                                    Gdy nadszedł ten dzień
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#eleven">
+                                    Już czas
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-1">
+                        <div class="col-12 col-md-6">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <strong>Wejdź - Fisheclectic</strong>
+                                </div>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f1">
+                                    Popatrz na mnie
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f2">
+                                    Dokąd iść
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f3">
+                                    Minęła zima
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f4">
+                                    Nocne spotkanie
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f5">
+                                    Ogród
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f6">
+                                    Góra Mirry
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f7">
+                                    Już niedługo
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f8">
+                                    Krok za krokiem
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f9">
+                                    Ukochana
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#f10">
+                                    Pieczęć
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <strong>Inne</strong>
+                                </div>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#a">
+                                    Ucisz się - Fisheclectic
+                                </a>
+                                <a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#b">
+                                    Chcę widzieć Cię - Fisheclectic
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col"></div>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="col"></div>
+</div>

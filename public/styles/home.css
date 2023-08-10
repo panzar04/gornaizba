@@ -1,0 +1,166 @@
+.link{
+    color: rgba(255, 255, 255, 0.500);
+  }
+  .link:hover{
+      color: rgba(255, 255, 255, 0.900);
+  }
+
+
+
+  
+#uwie {
+    background-image: url(/photos/home/k4.jpg);
+    object-fit: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #naucz {
+    background-image: url(/photos/headery/nau.jpg);
+    object-fit: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+
+  .mt-6{
+    margin-top: 5em;
+  }
+  
+  .homeheight, .homeheight2{
+    max-height: 33em;
+    min-height: 29em;
+}
+
+  /* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .mt-6{
+    margin-top: 5em;
+    }
+    .homeheight, .homeheight2{
+        max-height: 33em;
+        min-height: 29em;
+    }
+ }
+ 
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .mt-6{
+    margin-top: 5em;
+    }
+    .homeheight, .homeheight2{
+        max-height: 33em;
+        min-height: 29em;
+    }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .mt-6{
+    margin-top: 4em;
+    }
+    .homeheight{
+        max-height: 37em;
+        min-height: 32em;
+    }
+    .homeheight2{
+        max-height: 40em;
+        min-height: 35em;
+    }
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .mt-6{
+    margin-top: 4em;
+    }
+    .homeheight{
+        max-height: 37em;
+        min-height: 32em;
+    }
+    .homeheight2{
+        max-height: 40em;
+        min-height: 35em;
+    }
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    .mt-6{
+    margin-top: 4em;
+    }
+    .homeheight{
+        max-height: 37em;
+        min-height: 32em;
+    }
+    .homeheight2{
+        max-height: 40em;
+        min-height: 35em;
+    }
+ }
+
+
+ 
+.kalotlohome{
+    background-color: rgb(232, 183, 69);
+  }
+  .nabotlohome{
+    background-color: #95b7c4;
+  }
+
+  .container.nomargin{
+    max-width: 100%;
+  }
+
+  .nabo{
+    text-shadow: 10%;
+  }
+
+  
+  .animate-spinner {
+    animation-name: animate-spinner;
+    animation-timing-function: ease;
+    animation-duration: 0.75s;
+    /* animation-delay: 125ms; */
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes animate-spinner {
+    0% {
+      opacity: 1;
+      filter: brightness(1.0) saturate(1.0);
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      filter: brightness(1.2) saturate(1.2);
+      transform:translateZ(1);
+    }
+  }
+
+  #break{
+    min-height: 43rem;
+
+  }
+
+  .w{
+    width: 13em;
+  }
+
+  .h-btn{
+    height: 1em;
+    width: 1em;
+  }
+
+  .h{
+    height: 20em;
+  }
+
+  .box-zdjecie{
+    height: 6em;
+    object-fit: cover;
+  }
